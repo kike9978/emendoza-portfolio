@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CaseStudyCard from "../components/CaseStudyCard.astro";
 ---
 
 <html lang="en">
@@ -12,36 +13,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	</head>
 	<body>
 		<BaseLayout>
-			<p class="p">
+			<h1 class="hello-i-m-enrique text-center">
+				Hello! I’m <br />
+				Enrique Mendoza
+			</h1>
+			<p class="text-center">
 				An User Experience designer who loves solving problems and make
 				useful products that users love meet the business needs
 			</p>
-			<div class="hello-i-m-enrique">
-				Hello! I’m <br />
-				Enrique Mendoza
-			</div>
-			<div class="div-3">
-				<div class="overlap-group-wrapper">
-					<div class="overlap-group">
-						<img
-							class="mask-group"
-							alt="Mask group"
-							src="mask-group.png"
-						/>
-						<div class="text-wrapper-9">3</div>
-						<div class="product-wrapper">
-							<div class="text-wrapper-10">PRODUCT</div>
-						</div>
-						<div class="p-ackaging-wrapper">
-							<div class="text-wrapper-10">PACKAGING</div>
-						</div>
-						<div class="admin-wrapper">
-							<div class="text-wrapper-10">ADMIN</div>
-						</div>
-						<img class="img" alt="Vector" src="vector.svg" />
-					</div>
-				</div>
-				<div class="overlap-wrapper">
+			<div class="div-3 flex w-full">
+				<CaseStudyCard number="1" />
+				<CaseStudyCard number="2" />
+				<CaseStudyCard number="3" />
+				<!-- <div class="overlap-wrapper">
 					<div class="overlap">
 						<img
 							class="mask-group-2"
@@ -89,7 +73,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 						</div>
 						<img class="vector-3" alt="Vector" src="vector-2.svg" />
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</BaseLayout>
 	</body>
