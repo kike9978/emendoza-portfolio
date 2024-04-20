@@ -1,4 +1,5 @@
 ---
+import MenuDrawer from "./MenuDrawer.astro";
 import Image from "astro/components/Image.astro";
 import logoImage from "../media/logo.svg";
 ---
@@ -33,4 +34,27 @@ import logoImage from "../media/logo.svg";
         <a href="/contact" class="font-normal"> Contact </a>
         <a href="/resume" class="font-normal"> Resumé </a>
     </div>
+    <button class="block md:hidden" id="hamburguer"
+        ><img src="" alt="" /> Open</button
+    >
 </div>
+<MenuDrawer />
+
+<script>
+    const hamburguerButton = document.querySelector("#hamburguer");
+    const menuDrawer = document.querySelector("#menu-drawer");
+    const closeButton = document.querySelector("#close-button");
+    const body = document.querySelector("body");
+
+    hamburguerButton.addEventListener("click", () => {
+        menuDrawer.classList.add("left-0");
+        menuDrawer.classList.remove("left-[100%]");
+        body.classList.add("overflow-hidden");
+    });
+
+    closeButton.addEventListener("click", () => {
+        menuDrawer.classList.remove("left-0");
+        menuDrawer.classList.add("left-[100%]");
+        body.classList.remove("overflow-hidden");
+    });
+</script>
