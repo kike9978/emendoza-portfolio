@@ -3,32 +3,39 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CaseStudyCard from "../components/CaseStudyCard.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<BaseLayout>
-			<h1 class="hello-i-m-enrique text-center text-9xl">
-				Hello! I’m <br />
-				Enrique Mendoza
-			</h1>
-			<p class="text-center text-3xl max-w-2xl mx-auto mt-7">
-				A User Experience designer who loves solving problems and make
+<BaseLayout>
+	<div class="w-[1440px] h-[2152px] relative bg-neutral-100">
+		<div
+			class="w-[1216.71px] h-[544.90px] left-[135px] top-[807px] absolute"
+		>
+			<div
+				class="w-[687px] left-[376px] top-[532px] absolute text-center text-black text-[32px] font-normal font-['Space Grotesk Variable'] leading-[48px]"
+			>
+				An User Experience designer who loves solving problems and make
 				useful products that users love meet the business needs
-			</p>
-			<div class="div-3 flex justify-center mx-auto mt-28">
-				<CaseStudyCard
-					number="1"
-					title="HYDROPONIC DASHBOARD ADMIN FARM REDESIGN"
-				/>
-				<CaseStudyCard number="2" title="B2C MASSIVE MESSAGING APP" />
-				<CaseStudyCard number="3" title="PRODUCT PACKAGING ADMIN" />
 			</div>
-		</BaseLayout>
-	</body>
-</html>
+			<div
+				class="w-[951px] left-[244px] top-[250px] absolute text-center text-slate-400 text-[120px] font-extrabold font-['Cabinet Grotesk Variable'] leading-[115.20px]"
+			>
+				Hello! I’m <br />Enrique Mendoza
+			</div>
+		</div>
+		<h1 class="hello-i-m-enrique text-center text-9xl">
+			Hello! I’m <br />
+			Enrique Mendoza
+		</h1>
+		<p class="text-center text-3xl max-w-2xl mx-auto mt-7">
+			A User Experience designer who loves solving problems and make
+			useful products that users love meet the business needs
+		</p>
+		<div class="div-3 flex justify-center mx-auto mt-28">
+			<CaseStudyCard
+				number="1"
+				title="HYDROPONIC DASHBOARD ADMIN FARM REDESIGN"
+				link="./work/hydroponicFarmAdminDashboardRedesign"
+			/>
+			<CaseStudyCard number="2" title="B2C MASSIVE MESSAGING APP" />
+			<CaseStudyCard number="3" title="PRODUCT PACKAGING ADMIN" />
+		</div>
+	</div>
+</BaseLayout>
