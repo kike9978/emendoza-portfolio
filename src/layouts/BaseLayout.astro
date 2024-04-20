@@ -11,11 +11,9 @@ import Footer from "../components/Footer.astro";
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
     </head>
-    <body>
-        <div class="px-7 bg-stone-50">
-            <Navigation class="navigation-instance" union="union-2.svg" />
-            <slot />
-            <Footer class="footer-instance" vector="vector-4.svg" />
-        </div>
+    <body class="px-7 bg-stone-50">
+        <Navigation class="navigation-instance" union="union-2.svg" />
+        <slot />
+        <Footer class="footer-instance" vector="vector-4.svg" />
     </body>
 </html>

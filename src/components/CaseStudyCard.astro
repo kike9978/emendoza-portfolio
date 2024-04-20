@@ -2,12 +2,24 @@
 const { number, title, link = "/" } = Astro.props;
 ---
 
-<a class="overlap-group-wrapper border-2 border-black border-solid" href={link}>
-    <img class="mask-group" alt="Mask group" src="mask-group.png" />
-    <div class="text-wrapper-9">{number}</div>
-    {title.split(" ").map((word) => <p class="bg-black text-white">{word}</p>)}
-    <img class="vector" alt="Background image" src="./" />
-</a>
+<article
+    class="h-[511px] w-96 border-8 border-black border-solid rounded-3xl overflow-hidden relative"
+>
+    <a href={link} class="flex justify-end flex-col h-full">
+        <img
+            class="absolute w-full h-ful top-0"
+            alt="Mask group"
+            src="mask-group.png"
+        />
+        <div class="absolute top-6 left-6">{number}</div>
+        {
+            title
+                .split(" ")
+                .map((word) => <p class="bg-black text-white">{word}</p>)
+        }
+        <img class="vector" alt="Background image" src="./" />
+    </a>
+</article>
 
 <!-- <div class="w-[365px] h-[512.20px] rotate-[-5.48deg] shadow">
     <div class="w-[365px] h-[511.07px] left-0 top-0 absolute">
