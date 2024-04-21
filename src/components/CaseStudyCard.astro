@@ -1,0 +1,72 @@
+---
+const { number, title, link = "/" } = Astro.props;
+---
+
+<article
+    class="h-[511px] w-96 border-8 border-black border-solid rounded-3xl overflow-hidden relative"
+>
+    <a href={link} class="flex justify-end flex-col h-full">
+        <img
+            class="absolute w-full h-ful top-0"
+            alt="Mask group"
+            src="mask-group.png"
+        />
+        <div class="absolute top-6 left-6">{number}</div>
+        {
+            title
+                .split(" ")
+                .map((word) => <p class="bg-black text-white">{word}</p>)
+        }
+        <img class="vector" alt="Background image" src="./" />
+    </a>
+</article>
+
+<!-- <div class="w-[365px] h-[512.20px] rotate-[-5.48deg] shadow">
+    <div class="w-[365px] h-[511.07px] left-0 top-0 absolute">
+        <img
+            class="w-[795.62px] h-[521.54px] left-[-173.14px] top-[-9.70px] absolute"
+            src="https://via.placeholder.com/796x522"
+        />
+    </div>
+    <div
+        class="left-[45.31px] top-[25.70px] absolute text-white text-[61.17px] font-bold font-['Karla'] uppercase leading-[53.95px]"
+    >
+        2
+    </div>
+    <div
+        class="p-[3.04px] left-[223.64px] top-[415.13px] absolute origin-top-left rotate-[8.13deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
+    >
+        <div
+            class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
+        >
+            B2C
+        </div>
+    </div>
+    <div
+        class="p-[3.04px] left-[42.21px] top-[418.37px] absolute origin-top-left rotate-[-4.39deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
+    >
+        <div
+            class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
+        >
+            Massive
+        </div>
+    </div>
+    <div
+        class="p-[3.04px] left-[18.49px] top-[446.45px] absolute origin-top-left rotate-[2.43deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
+    >
+        <div
+            class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
+        >
+            Messaging
+        </div>
+    </div>
+    <div
+        class="p-[3.04px] left-[241.58px] top-[463.93px] absolute origin-top-left rotate-[-4.07deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
+    >
+        <div
+            class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
+        >
+            App
+        </div>
+    </div>
+</div> -->
