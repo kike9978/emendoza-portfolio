@@ -1,15 +1,7 @@
 ---
-import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
-
+import image1 from "../assets/studies/unsplash__t2S-uOo_ew-1.png";
+import mask from "../assets/story-card-mask.svg";
 const { number, title, link = "/", imagePath } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>(
-    "/src/assets/studies/*.{jpeg,jpg,png,gif}",
-);
-if (!images[imagePath])
-    throw new Error(
-        `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
-    );
 
 const deg = Math.random() * 100;
 const rounded = deg.toFixed(2);
@@ -35,11 +27,6 @@ const rounded = deg.toFixed(2);
                     width="1"
                     height="1"
                 >
-                    <Image
-                        src={images[imagePath]()}
-                        alt="hola"
-                        class="[mask-image:url(#mask)]"
-                    />
                 </pattern>
             </defs>
             <path
@@ -51,6 +38,11 @@ const rounded = deg.toFixed(2);
             >
             </path>
         </svg>
+        <img
+            src={image1.src}
+            alt="hola"
+            class=`[mask-image:linear-gradient(black_25%,_transparent_50%)")]`
+        />
         <div
             class="w-full h-full absolute flex flex-col justify-end p-7 items-center"
         >
