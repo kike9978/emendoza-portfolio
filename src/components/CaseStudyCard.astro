@@ -26,6 +26,7 @@ const rounded = deg.toFixed(2);
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             class="w-full h-full"
+            id="mask"
         >
             <defs>
                 <pattern
@@ -34,7 +35,11 @@ const rounded = deg.toFixed(2);
                     width="1"
                     height="1"
                 >
-                    <Image src={images[imagePath]()} alt="hola" />
+                    <Image
+                        src={images[imagePath]()}
+                        alt="hola"
+                        class="[mask-image:url(#mask)]"
+                    />
                 </pattern>
             </defs>
             <path

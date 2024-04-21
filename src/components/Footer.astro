@@ -1,11 +1,11 @@
 ---
-const { vector } = Astro.props;
+import vector from "../assets/duck-mask.svg";
 ---
 
 <div
     class="rounded-3xl bg-black text-white grid grid-cols-4 py-4 px-8 md:px-16 mt-28 mb-12"
 >
-    <img class="vector" alt="Vector" src={vector} />
+    <img class="-rotate-12" alt="Vector" src={vector.src} />
     <p class="col-span-4 text-4xl md:text-5xl font-heading font-bold">
         Let&#39;s start creating something amazing!
     </p>
