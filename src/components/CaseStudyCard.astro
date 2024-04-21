@@ -1,72 +1,121 @@
 ---
-const { number, title, link = "/" } = Astro.props;
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+const { number, title, link = "/", imagePath } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/studies/*.{jpeg,jpg,png,gif}",
+);
+if (!images[imagePath])
+    throw new Error(
+        `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+    );
+
+const deg = Math.random() * 100;
+const rounded = deg.toFixed(2);
 ---
 
-<article
-    class="h-[511px] w-96 border-8 border-black border-solid rounded-3xl overflow-hidden relative"
->
+<div class=`w-2 h-2 rotate-[${rounded}deg] bg-red-500`></div>
+<div class=`w-2 h-2 rotate-[22.43deg] bg-blue-500`></div>
+<article class=`relative rotate-[${rounded}deg]`>
     <a href={link} class="flex justify-end flex-col h-full">
-        <img
-            class="absolute w-full h-ful top-0"
-            alt="Mask group"
-            src="mask-group.png"
-        />
-        <div class="absolute top-6 left-6">{number}</div>
-        {
-            title
-                .split(" ")
-                .map((word) => <p class="bg-black text-white">{word}</p>)
-        }
-        <img class="vector" alt="Background image" src="./" />
+        <svg
+            width="374"
+            height="520"
+            viewBox="0 0 374 520"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-full h-full"
+        >
+            <defs>
+                <pattern
+                    id="188d1671-d29a-4af9-815d-2e775ba8a897"
+                    patternUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                >
+                    <Image src={images[imagePath]()} alt="hola" />
+                </pattern>
+            </defs>
+            <path
+                d="M359.924 476.662C358.013 492.06 346.069 504.283 330.72 506.545C304.053 510.48 256.222 515.559 187.049 515.559C117.875 515.559 70.1122 510.487 43.4344 506.553C28.0886 504.291 16.1298 492.068 14.2305 476.673C10.2203 444.139 4.54492 377.386 4.54492 260.026C4.54492 142.667 10.2543 75.457 14.2682 43.0434C16.1676 27.6938 28.0583 15.5047 43.3476 13.1824C68.9491 9.30067 115.16 4.48999 187.045 4.48999C258.929 4.48999 305.212 9.30445 330.799 13.19C346.069 15.5085 357.96 27.6711 359.871 43.0019C363.881 75.1662 369.545 141.557 369.545 260.026C369.545 378.496 363.926 444.354 359.92 476.662H359.924Z"
+                stroke="black"
+                stroke-width="7.17449"
+                stroke-miterlimit="10"
+                fill="url(#188d1671-d29a-4af9-815d-2e775ba8a897)"
+            >
+            </path>
+        </svg>
+        <div
+            class="w-full h-full absolute flex flex-col justify-end p-7 items-center"
+        >
+            <div class="absolute top-6 left-6 text-6xl font-heading font-bold">
+                {number}
+            </div>
+            {
+                title
+                    .split(" ")
+                    .map((word) => (
+                        <h2 class="bg-black text-white font-heading tracking-[-0.07rem] text-4xl font-bold w-fit leading-[.80em] text-center">
+                            {word}
+                        </h2>
+                    ))
+            }
+        </div>
     </a>
 </article>
 
-<!-- <div class="w-[365px] h-[512.20px] rotate-[-5.48deg] shadow">
-    <div class="w-[365px] h-[511.07px] left-0 top-0 absolute">
-        <img
-            class="w-[795.62px] h-[521.54px] left-[-173.14px] top-[-9.70px] absolute"
-            src="https://via.placeholder.com/796x522"
-        />
-    </div>
-    <div
-        class="left-[45.31px] top-[25.70px] absolute text-white text-[61.17px] font-bold font-['Karla'] uppercase leading-[53.95px]"
-    >
-        2
-    </div>
-    <div
-        class="p-[3.04px] left-[223.64px] top-[415.13px] absolute origin-top-left rotate-[8.13deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
-    >
-        <div
-            class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
+<!-- <div class="
+            w-[365px]
+            h-[512.20px]
+            rotate-[-5.48deg]
+            shadow"
         >
-            B2C
-        </div>
-    </div>
-    <div
-        class="p-[3.04px] left-[42.21px] top-[418.37px] absolute origin-top-left rotate-[-4.39deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
-    >
-        <div
-            class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
-        >
-            Massive
-        </div>
-    </div>
-    <div
-        class="p-[3.04px] left-[18.49px] top-[446.45px] absolute origin-top-left rotate-[2.43deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
-    >
-        <div
-            class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
-        >
-            Messaging
-        </div>
-    </div>
-    <div
-        class="p-[3.04px] left-[241.58px] top-[463.93px] absolute origin-top-left rotate-[-4.07deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
-    >
-        <div
-            class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
-        >
-            App
-        </div>
-    </div>
-</div> -->
+            <div class="w-[365px] h-[511.07px] left-0 top-0 absolute">
+                <img
+                    class="w-[795.62px] h-[521.54px] left-[-173.14px] top-[-9.70px] absolute"
+                    src="https://via.placeholder.com/796x522"
+                />
+            </div>
+            <div
+                class="left-[45.31px] top-[25.70px] absolute text-white text-[61.17px] font-bold font-['Karla'] uppercase leading-[53.95px]"
+            >
+                2
+            </div>
+            <div
+                class="p-[3.04px] left-[223.64px] top-[415.13px] absolute origin-top-left rotate-[8.13deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
+            >
+                <div
+                    class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
+                >
+                    B2C
+                </div>
+            </div>
+            <div
+                class="p-[3.04px] left-[42.21px] top-[418.37px] absolute origin-top-left rotate-[-4.39deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
+            >
+                <div
+                    class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
+                >
+                    Massive
+                </div>
+            </div>
+            <div
+                class="p-[3.04px] left-[18.49px] top-[446.45px] absolute origin-top-left rotate-[2.43deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
+            >
+                <div
+                    class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
+                >
+                    Messaging
+                </div>
+            </div>
+            <div
+                class="p-[3.04px] left-[241.58px] top-[463.93px] absolute origin-top-left rotate-[-4.07deg] bg-black justify-center items-center gap-[3.04px] inline-flex"
+            >
+                <div
+                    class="text-white text-[41.65px] font-bold font-['Cabinet Grotesk Variable'] uppercase leading-[30.84px]"
+                >
+                    App
+                </div>
+            </div>
+        </path> -->
