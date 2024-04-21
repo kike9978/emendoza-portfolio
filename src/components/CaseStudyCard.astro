@@ -10,9 +10,6 @@ if (!images[imagePath])
     throw new Error(
         `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
     );
-
-const deg = Math.random() * 100;
-const rounded = deg.toFixed(2);
 ---
 
 <article class=`relative transition-all`>
@@ -21,9 +18,16 @@ const rounded = deg.toFixed(2);
         <div
             class="w-full h-full absolute flex flex-col justify-end p-7 items-center"
         >
-            <div class="absolute top-6 left-6 text-6xl font-heading font-bold">
-                {number}
-            </div>
+            <span
+                class="absolute top-12 left-12 text-6xl font-heading text-white font-bold"
+            >
+                <p class="stroke">
+                    {number}
+                </p>
+                <p class="absolute top-0">
+                    {number}
+                </p>
+            </span>
             {
                 title
                     .split(" ")
@@ -39,6 +43,10 @@ const rounded = deg.toFixed(2);
 <style>
     .hover {
         rotate: 0deg !important;
+    }
+
+    .stroke {
+        -webkit-text-stroke: 10px black;
     }
 </style>
 
