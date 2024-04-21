@@ -6,6 +6,7 @@ import image2 from "../../assets/studies/dashboard-redesign/dashboard-redesign02
 import image3 from "../../assets/studies/dashboard-redesign/dashboard-redesign03.png";
 import image4 from "../../assets/studies/dashboard-redesign/dashboard-redesign04.png";
 import image5 from "../../assets/studies/dashboard-redesign/dashboard-redesign05.png";
+import duckVector from "../../assets/resting-duck.svg";
 ---
 
 <BaseLayout>
@@ -93,10 +94,7 @@ import image5 from "../../assets/studies/dashboard-redesign/dashboard-redesign05
             project. This understanding became crucial in designing a solution
             that catered to diverse user needs.
         </p>
-        <img
-            class="w-[1360px] h-[351px] col-start-1 md:col-span-12 rounded-[26px] blur-[5.37px]"
-            src={image2.src}
-        />
+        <img class="w-full col-start-1 md:col-span-12" src={image2.src} />
         <div class="md:col-start-2 md:col-span-4">
             <h2
                 class="text-cyan-950 text-[32px] font-bold font-heading leading-[40.96px]"
@@ -116,8 +114,8 @@ import image5 from "../../assets/studies/dashboard-redesign/dashboard-redesign05
                 make data-driven decisions.
             </p>
         </div>
-        <img src={image3.src} alt="" class="col-start-7 col-span-4" />
-        <img src={image4.src} alt="" class="col-start-1 col-span-12" />
+        <img src={image3.src} alt="" class="md:col-start-7 md:col-span-4" />
+        <img src={image4.src} alt="" class="col-start-1 md:col-span-12" />
         <div
             class="col-start-1 md:col-span-12 bg-slate-300 flex-col justify-center items-start grid grid-cols-1 md:grid-cols-12 gap-4"
         >
@@ -162,38 +160,10 @@ import image5 from "../../assets/studies/dashboard-redesign/dashboard-redesign05
             making things look aesthetically pleasing.
         </p>
 
-        <div class="col-start-1 md:col-span-12 bg-blue-400 grid grid-cols-3">
-            <img
-                class="w-[362.57px] h-[269.74px] left-[1618px] top-[372px]"
-                src="https://via.placeholder.com/363x270"
-            />
-
-            <img
-                class="w-[417.65px] h-[277.45px]"
-                src="https://via.placeholder.com/418x277"
-            />
-            <img
-                class="w-[417.65px] h-[289.85px]"
-                src="https://via.placeholder.com/418x290"
-            />
-            <img
-                class="w-[417.65px] h-[278.63px]"
-                src="https://via.placeholder.com/418x279"
-            />
-            <img
-                class="w-[417.35px] h-[287.78px]"
-                src="https://via.placeholder.com/417x288"
-            />
-            <img
-                class="w-[424px] h-[283px]"
-                src="https://via.placeholder.com/424x283"
-            />
-            <img
-                class="w-[424px] h-[277px]"
-                src="https://via.placeholder.com/424x277"
-            />
-        </div>
-        <div class="flex justify-center flex-col md:col-span-12">
+        <img class="col-start-1 md:col-span-12" src={image5.src} />
+        <div
+            class="flex justify-center items-center flex-col md:col-span-6 md:col-start-4"
+        >
             <p
                 class="text-center text-cyan-950 text-lg font-normal leading-[29.34px]"
             >
@@ -203,10 +173,7 @@ import image5 from "../../assets/studies/dashboard-redesign/dashboard-redesign05
                 highlighted my understanding of the importance of continuous
                 learning and improvement in the design process.
             </p>
-            <img
-                class="h-1 w-2 rotate-[2.47deg]"
-                src="https://via.placeholder.com/320x530"
-            />
+            <img class="w-10 rotate-[2.47deg]" src={duckVector.src} />
         </div>
     </main>
 </BaseLayout>
