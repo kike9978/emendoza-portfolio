@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
-const { number, title, link = "/", imagePath } = Astro.props;
+const { number, title, link = "/", imagePath, commingSoon } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
     "/src/assets/studies/*.{jpeg,jpg,png,gif}",
 );
@@ -12,7 +12,15 @@ if (!images[imagePath])
     );
 ---
 
-<article class=`relative transition-all`>
+<article class=`relative transition-all ${commingSoon && "grayscale"}`>
+    {
+        commingSoon && (
+            <div class="absolute h-full w-full z-10 bg-[radial-gradient(var(--tw-gradient-stops))] from-[rgba(20,20,20,_1)] to-80% to-[rgba(20,20,20,_0)] flex flex-col items-center justify-center">
+                <p class="text-white font-heading text-5xl">Comming soon!</p>
+            </div>
+        )
+    }
+
     <a href={link} class="flex justify-end flex-col h-full">
         <Image src={images[imagePath]()} alt="hola" />
         <div
