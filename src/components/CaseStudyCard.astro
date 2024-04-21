@@ -1,5 +1,5 @@
 ---
-import image1 from "../assets/studies/unsplash__t2S-uOo_ew-1.png";
+import image1 from "../assets/studies/case-cover-1.png";
 import mask from "../assets/story-card-mask.svg";
 const { number, title, link = "/", imagePath } = Astro.props;
 
@@ -7,37 +7,10 @@ const deg = Math.random() * 100;
 const rounded = deg.toFixed(2);
 ---
 
-<div class=`w-2 h-2 rotate-[${rounded}deg] bg-red-500`></div>
-<div class=`w-2 h-2 rotate-[22.43deg] bg-blue-500`></div>
+<div class=`w-6 h-6 rotate-[${rounded}deg] bg-red-500`></div>
+<div class=`w-6 h-6 rotate-[22.43deg] bg-blue-500`></div>
 <article class=`relative rotate-[${rounded}deg]`>
     <a href={link} class="flex justify-end flex-col h-full">
-        <svg
-            width="374"
-            height="520"
-            viewBox="0 0 374 520"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-full h-full"
-            id="mask"
-        >
-            <defs>
-                <pattern
-                    id="188d1671-d29a-4af9-815d-2e775ba8a897"
-                    patternUnits="objectBoundingBox"
-                    width="1"
-                    height="1"
-                >
-                </pattern>
-            </defs>
-            <path
-                d="M359.924 476.662C358.013 492.06 346.069 504.283 330.72 506.545C304.053 510.48 256.222 515.559 187.049 515.559C117.875 515.559 70.1122 510.487 43.4344 506.553C28.0886 504.291 16.1298 492.068 14.2305 476.673C10.2203 444.139 4.54492 377.386 4.54492 260.026C4.54492 142.667 10.2543 75.457 14.2682 43.0434C16.1676 27.6938 28.0583 15.5047 43.3476 13.1824C68.9491 9.30067 115.16 4.48999 187.045 4.48999C258.929 4.48999 305.212 9.30445 330.799 13.19C346.069 15.5085 357.96 27.6711 359.871 43.0019C363.881 75.1662 369.545 141.557 369.545 260.026C369.545 378.496 363.926 444.354 359.92 476.662H359.924Z"
-                stroke="black"
-                stroke-width="7.17449"
-                stroke-miterlimit="10"
-                fill="url(#188d1671-d29a-4af9-815d-2e775ba8a897)"
-            >
-            </path>
-        </svg>
         <img
             src={image1.src}
             alt="hola"
