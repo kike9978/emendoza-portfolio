@@ -1,0 +1,19 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body class="px-7 bg-stone-50">
+        <Navigation class="navigation-instance" union="union-2.svg" />
+        <slot />
+        <Footer class="footer-instance" vector="vector-4.svg" />
+    </body>
+</html>

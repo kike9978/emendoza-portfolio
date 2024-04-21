@@ -1,0 +1,36 @@
+---
+import Image from "astro/components/Image.astro";
+import logoImage from "../media/logo.svg";
+---
+
+<!-- 
+<div class="navigation flex w-full justify-between">
+    <a href="./"><img alt="logo" src={logoImage.src} /></a>
+    <div class="flex gap-3">
+        <a href="/work" class="text-wrapper ">Work</a>
+        <a href="/about" class="text-wrapper">About</a>
+        <a href="/contact" class="text-wrapper">Contact</a>
+        <a href="/" class="text-wrapper">Resumé</a>
+    </div>
+</div> -->
+<div class="w-full px-10 pt-2.5 pb-[11.89px] justify-between items-center flex">
+    <div
+        class="w-[81.47px] h-[91.11px] relative flex-col justify-start items-start flex"
+    >
+        <a href="/"
+            ><Image
+                class="w-[57.68px] h-[53.69px]"
+                src={logoImage}
+                alt="logo"
+            /></a
+        >
+    </div>
+    <div
+        class="justify-start items-start gap-[52px] inline-flex font-['Space Grotesk Variable'] leading-[30.58px] text-black text-[22px] hidden lg:block"
+    >
+        <a href="/" class="font-normal"> Work </a>
+        <a href="/about" class="font-normal"> About </a>
+        <a href="/contact" class="font-normal"> Contact </a>
+        <a href="/resume" class="font-normal"> Resumé </a>
+    </div>
+</div>

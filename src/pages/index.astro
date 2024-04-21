@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CaseStudyCard from "../components/CaseStudyCard.astro";
+---
+
+<BaseLayout>
+	<div class="w-full">
+		<h1 class="hello-i-m-enrique text-center text-7xl lg:text-9xl">
+			Hello! I’m <br />
+			Enrique Mendoza
+		</h1>
+		<p class="text-center text-3xl max-w-2xl mx-auto mt-7">
+			A User Experience designer who loves solving problems and make
+			useful products that users love meet the business needs
+		</p>
+		<div class="div-3 flex justify-center mx-auto mt-28 gap-5">
+			<CaseStudyCard
+				number="1"
+				title="HYDROPONIC DASHBOARD ADMIN FARM REDESIGN"
+				link="./work/hydroponicFarmAdminDashboardRedesign"
+			/>
+			<CaseStudyCard number="2" title="B2C MASSIVE MESSAGING APP" />
+			<CaseStudyCard number="3" title="PRODUCT PACKAGING ADMIN" />
+		</div>
+	</div>
+</BaseLayout>

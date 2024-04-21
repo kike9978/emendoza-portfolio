@@ -1,0 +1,25 @@
+---
+const { vector } = Astro.props;
+---
+
+<div
+    class="rounded-3xl bg-black text-white grid grid-cols-4 py-4 px-16 mt-28 mb-12"
+>
+    <img class="vector" alt="Vector" src={vector} />
+    <p class="col-span-4 text-5xl">
+        Let&#39;s start creating something amazing!
+    </p>
+    <div class="flex flex-col">
+        <div class="text-wrapper">Follow</div>
+        <ul>
+            <li class="text-wrapper-3">Instagram</li>
+            <li class="text-wrapper-4">LinkedIn</li>
+            <li class="text-wrapper-5">Dribbble</li>
+            <li class="text-wrapper-6">Behance</li>
+        </ul>
+    </div>
+    <div class="flex flex-col">
+        <div class="div">Email</div>
+        <div class="text-wrapper-2">kikemendoza9978@gmail.com</div>
+    </div>
+</div>
