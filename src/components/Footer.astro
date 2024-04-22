@@ -3,23 +3,41 @@ import vector from "../assets/duck-mask.svg";
 ---
 
 <div
-    class="rounded-3xl bg-black text-white grid grid-cols-1 md:grid-cols-4 py-4 px-8 md:px-16 mt-28 mb-12"
+    class="rounded-3xl bg-[radial-gradient(at_center_top,_var(--tw-gradient-stops))] from-[rgba(60,_91,_104,_1)] to-[rgba(4,_8,_14,_1)] text-white grid grid-cols-1 md:grid-cols-4 py-4 px-8 md:px-16 mt-28 mb-12 gap-y-11 py-16"
 >
     <img class="-rotate-12" alt="Vector" src={vector.src} />
     <p class="md:col-span-4 text-4xl md:text-5xl font-heading font-bold">
         Let&#39;s start creating something amazing!
     </p>
     <div class="flex flex-col">
-        <div>Follow</div>
-        <ul>
-            <li class="text-wrapper-3">Instagram</li>
-            <li class="text-wrapper-4">LinkedIn</li>
-            <li class="text-wrapper-5">Dribbble</li>
-            <li class="text-wrapper-6">Behance</li>
+        <h3 class="font-heading text-base">Follow</h3>
+        <ul class="text-lg flex gap-3 flex-col">
+            <li class="text-wrapper-3">
+                <a
+                    href="https://www.instagram.com/moschata.studio/"
+                    target="_blank">Instagram</a
+                >
+            </li>
+            <li class="text-wrapper-4">
+                <a
+                    href="https://www.linkedin.com/in/jes%C3%BAs-enrique-mendoza-l%C3%B3pez-1a533b23a/"
+                    target="_blank">LinkedIn</a
+                >
+            </li>
+            <li class="text-wrapper-5">
+                <a href="https://dribbble.com/Maxu_ux" target="_blank"
+                    >Dribbble</a
+                >
+            </li>
+            <li class="text-wrapper-6">
+                <a href="https://www.behance.net/kikemendozd22f" target="_blank"
+                    >Behance</a
+                >
+            </li>
         </ul>
     </div>
     <div class="flex flex-col">
-        <div class="div">Email</div>
-        <div class="text-wrapper-2">kikemendoza9978@gmail.com</div>
+        <h3 class="font-heading text-base">Email</h3>
+        <a href="mailto:" class="text-lg">kikemendoza9978@gmail.com</a>
     </div>
 </div>
