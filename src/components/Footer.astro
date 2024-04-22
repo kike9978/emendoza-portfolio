@@ -1,5 +1,7 @@
 ---
 import vector from "../assets/duck-mask.svg";
+
+const { message } = Astro.props;
 ---
 
 <div
@@ -7,7 +9,7 @@ import vector from "../assets/duck-mask.svg";
 >
     <img class="-rotate-12" alt="Vector" src={vector.src} />
     <p class="md:col-span-4 text-4xl md:text-5xl font-heading font-bold">
-        Let&#39;s start creating something amazing!
+        {message}
     </p>
     <div class="flex flex-col">
         <h3 class="font-heading text-base">Follow</h3>
