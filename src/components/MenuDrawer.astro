@@ -3,12 +3,14 @@
 ---
 
 <div
-    class="w-full h-full bg-red-500 fixed top-0 left-[100%] flex flex-col text-white justify-center items-center z-10"
+    class="w-full h-full bg-[radial-gradient(at_center_top,_var(--tw-gradient-stops))] from-[rgba(60,_91,_104,_1)] to-[rgba(4,_8,_14,_1)] fixed top-0 left-[100%] flex flex-col text-white justify-center items-center z-10 transition-all duration-300"
     id="menu-drawer"
 >
     <button class="absolute top-6 right-6" id="close-button">Close</button>
-    <a href="/" class="font-normal"> Work </a>
-    <a href="/about" class="font-normal"> About </a>
-    <a href="/contact" class="font-normal"> Contact </a>
-    <a href="/resume" class="font-normal"> Resumé </a>
+    <div class="flex flex-col font-semibold text-4xl text-center gap-4">
+        <a href="/"> Work </a>
+        <a href="/about"> About </a>
+        <a href="/contact"> Contact </a>
+        <a href="/resume"> Resumé </a>
+    </div>
 </div>
