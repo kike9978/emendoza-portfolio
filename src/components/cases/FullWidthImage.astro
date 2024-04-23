@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
 
-const { imgSrc, alt } = Astro.props;
+const { src, alt, extraClass } = Astro.props;
 ---
 
 <Image
-    class="col-start-1 md:col-span-12 md:mb-28 max-w-[100vw] md:max-w-[calc(100vw_-_1rem)] relative -left-4 md:-left-7"
-    src={imgSrc}
+    class=`col-start-1 md:col-span-12 max-w-[100vw] md:max-w-[calc(100vw_-_1rem)] relative -left-4 md:-left-7${extraClass && extraClass}`
+    src={src}
     alt={alt}
 />
