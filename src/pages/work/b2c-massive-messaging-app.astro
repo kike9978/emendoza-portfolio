@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CoverLayout from "../../layouts/cases/CoverLayout.astro";
+import CaseLayout from "../../layouts/CaseLayout.astro";
+
+const caseCover = {
+    titleCase: "B2C Massive Messaging App",
+    roles: [
+        "UX Design",
+        "Visual Design",
+        "UX Writing",
+        "Workshop facilitator",
+        "Prototyping",
+        "Testing",
+        "Frontend Devloper",
+        "Animator",
+    ],
+    overview: [
+        "A leading hydroponics company needed a complete overhaul of their admin dashboard. The existing system, while functional, struggled with a cluttered interface, a confusing information hierarchy, and numerous unused pages and modules. This led to user frustration and hindered productivity across all departments.",
+        "I played a key role in the UX/UI redesign, focusing on streamlining workflows, improving usability, and building a scalable foundation for future growth.",
+    ],
+    date: "2022 - 2024",
+};
+---
+
+<CaseLayout title={caseCover.titleCase}>
+    <CoverLayout
+        roles={caseCover.roles}
+        titleCase={caseCover.titleCase}
+        overview={caseCover.overview}
+        date={caseCover.date}
+    />
+</CaseLayout>

@@ -1,0 +1,13 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { title } = Astro.props;
+---
+
+<BaseLayout title={title}>
+    <main
+        class="grid grid-cols-1 md:grid-cols-12 gap-x-4 text-cyan-950 text-lg font-normal leading-[29.34px] w-full"
+    >
+        <slot />
+    </main>
+</BaseLayout>
