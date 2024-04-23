@@ -1,14 +1,7 @@
 ---
 import FullWidthImage from "../../components/cases/FullWidthImage.astro";
 
-const {
-    titleCase,
-    overview,
-    roles,
-    date,
-    coverImg = "https://t3.ftcdn.net/jpg/02/48/42/64/240_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    imgAlt,
-} = Astro.props;
+const { titleCase, overview, roles, date, coverImg, imgAlt } = Astro.props;
 ---
 
 <h1
@@ -49,4 +42,4 @@ const {
     *Designs are blurred due to NDA
 </small>
 
-<FullWidthImage src={coverImg} alt={imgAlt} />
+<FullWidthImage imgSrc={coverImg} alt={imgAlt} />
