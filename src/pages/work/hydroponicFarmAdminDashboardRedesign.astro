@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
 
 <BaseLayout title="Enrique Mendoza — Hydroponic Farm Admin Dashboard Redesign">
     <main
-        class="grid grid-cols-1 md:grid-cols-12 gap-4 text-cyan-950 text-lg font-normal leading-[29.34px] w-full"
+        class="grid grid-cols-1 md:grid-cols-12 gap-x-4 text-cyan-950 text-lg font-normal leading-[29.34px] w-full"
     >
         <h1
             class="text-[52px] font-bold leading-[67.60px] mt-12 mb-20 md:col-span-8 md:col-start-2 font-heading"
@@ -39,7 +39,7 @@ import { Image } from "astro:assets";
                 scalable foundation for future growth.
             </p>
         </div>
-        <div class="md:col-span-2">
+        <div class="md:col-span-2 mt-6 md:mt-0">
             <h2
                 class="text-cyan-950 text-opacity-80 text-base font-normal font-heading leading-snug"
             >
@@ -58,7 +58,7 @@ import { Image } from "astro:assets";
             </ul>
         </div>
 
-        <div class="md:col-span-2">
+        <div class="md:col-span-2 mt-6 md:mt-0">
             <h2
                 class="text-cyan-950 text-opacity-80 text-base font-normal font-heading leading-snug"
             >
@@ -73,13 +73,13 @@ import { Image } from "astro:assets";
         </small>
 
         <Image
-            class="w-full col-start-1 md:col-span-12 mb-28"
+            class="col-start-1 md:col-span-12 md:mb-28 max-w-[100vw] md:max-w-[calc(100vw_-_1rem)] relative -left-4 md:-left-7"
             src={image1}
             alt="An alley of lettuce hydroponic farm"
         />
 
         <h2
-            class="md:col-span-4 md:col-start-2 text-[32px] font-bold font-heading leading-[40.96px]"
+            class="md:col-span-4 md:col-start-2 text-[32px] font-bold font-heading leading-[40.96px] mt-6 md:mt-0"
         >
             Navigating a Complex System
         </h2>
@@ -97,11 +97,11 @@ import { Image } from "astro:assets";
             that catered to diverse user needs.
         </p>
         <Image
-            class="w-full col-start-1 md:col-span-12 mt-20 mb-28"
+            class="w-full col-start-1 md:col-span-12 mt-4 md:my-24"
             src={image2}
             alt="Blurred image of a UX Workshop section"
         />
-        <div class="md:col-start-2 md:col-span-4">
+        <div class="md:col-start-2 md:col-span-4 mt-6 md:mt-0">
             <h2
                 class="text-cyan-950 text-[32px] font-bold font-heading leading-[40.96px]"
             >
@@ -120,20 +120,26 @@ import { Image } from "astro:assets";
                 make data-driven decisions.
             </p>
         </div>
-        <Image
-            src={image3}
-            alt=""
-            class="md:col-start-7 md:col-span-4"
-            alt="A blurred image of a mobile design for a form"
-        />
-        <Image
-            src={image4}
-            alt=""
-            class="col-start-1 md:col-span-12"
-            alt="A set of blurred images of various designs arranged in a diagonal direction"
-        />
         <div
-            class="col-start-1 md:col-span-12 bg-slate-300 flex-col justify-center items-start grid grid-cols-1 md:grid-cols-12 gap-4"
+            class="md:col-start-7 md:col-span-5 place-self-center md:max-w-full flex-col flex justify-center items-center"
+        >
+            <Image
+                src={image3}
+                class="max-w-[60%]"
+                alt="A blurred image of a mobile design for a form"
+            />
+        </div>
+        <div
+            class="relative contrast-less: ol-start-1 md:col-span-12 mt-28 w-full"
+        >
+            <Image
+                src={image4}
+                class="max-w-[100vw] md:max-w-[calc(100vw_-_1rem)] relative -left-4 md:-left-7"
+                alt="A set of blurred images of various designs arranged in a diagonal direction"
+            />
+        </div>
+        <div
+            class="col-start-1 md:col-span-12 bg-slate-300 flex-col justify-center items-start grid grid-cols-1 md:grid-cols-12 gap-4 mb-28 py-16 w-[100vw] md:w-[calc(100vw_-_1rem)] max-w-[100vw] md:max-w-[calc(100vw_-_1rem)] relative -left-4 md:-left-7 px-4 md:px-0"
         >
             <h2
                 class="text-[22px] font-bold font-heading leading-7 md:col-start-4 md:col-span-6"
@@ -177,23 +183,21 @@ import { Image } from "astro:assets";
         </p>
 
         <Image
-            class="col-start-1 md:col-span-12"
+            class="col-start-1 md:col-span-12 my-28"
             src={image5}
             alt="A set of blurred images of various designs arranged in a grid layout"
         />
         <div
             class="flex justify-center items-center flex-col md:col-span-6 md:col-start-4"
         >
-            <p
-                class="text-center text-cyan-950 text-lg font-normal leading-[29.34px]"
-            >
+            <p class="text-lg font-normal leading-[29.34px]">
                 This project showcased my ability to navigate complex systems,
                 translate user needs into actionable design solutions, and
                 collaborate effectively within a cross-functional team. It also
                 highlighted my understanding of the importance of continuous
                 learning and improvement in the design process.
             </p>
-            <img class="w-10 rotate-[2.47deg]" src={duckVector.src} />
+            <img class="w-20 rotate-[2.47deg] mt-11" src={duckVector.src} />
         </div>
     </main>
 </BaseLayout>
