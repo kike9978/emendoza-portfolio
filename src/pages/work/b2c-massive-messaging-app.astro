@@ -1,7 +1,8 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import CoverLayout from "../../layouts/cases/CoverLayout.astro";
 import CaseLayout from "../../layouts/CaseLayout.astro";
+
+import image1 from "../../assets/studies/messaging-app/messaging-app01.png";
 
 const caseCover = {
     titleCase: "B2C Massive Messaging App",
@@ -29,5 +30,6 @@ const caseCover = {
         titleCase={caseCover.titleCase}
         overview={caseCover.overview}
         date={caseCover.date}
+        coverImg={image1}
     />
 </CaseLayout>

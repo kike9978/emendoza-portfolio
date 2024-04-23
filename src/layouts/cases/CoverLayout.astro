@@ -1,8 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import image1 from "../../assets/studies/dashboard-redesign/dashboard-redesign01.png";
 
-const { titleCase, overview, roles, date, imgSrc } = Astro.props;
+const {
+    titleCase,
+    overview,
+    roles,
+    date,
+    coverImg = "https://t3.ftcdn.net/jpg/02/48/42/64/240_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
+} = Astro.props;
 ---
 
 <h1
@@ -45,6 +50,6 @@ const { titleCase, overview, roles, date, imgSrc } = Astro.props;
 
 <Image
     class="col-start-1 md:col-span-12 md:mb-28 max-w-[100vw] md:max-w-[calc(100vw_-_1rem)] relative -left-4 md:-left-7"
-    src={image1}
+    src={coverImg}
     alt="An alley of lettuce hydroponic farm"
 />
