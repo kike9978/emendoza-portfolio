@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import FullWidthImage from "../../components/cases/FullWidthImage.astro";
 
 const {
     titleCase,
@@ -7,6 +7,7 @@ const {
     roles,
     date,
     coverImg = "https://t3.ftcdn.net/jpg/02/48/42/64/240_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
+    imgAlt,
 } = Astro.props;
 ---
 
@@ -48,8 +49,4 @@ const {
     *Designs are blurred due to NDA
 </small>
 
-<Image
-    class="col-start-1 md:col-span-12 md:mb-28 max-w-[100vw] md:max-w-[calc(100vw_-_1rem)] relative -left-4 md:-left-7"
-    src={coverImg}
-    alt="An alley of lettuce hydroponic farm"
-/>
+<FullWidthImage src={coverImg} alt={imgAlt} />
