@@ -16,7 +16,7 @@ const { titleCase, overview, roles, date, imgSrc } = Astro.props;
     >
         Overview
     </h2>
-    {overview.map((paragraph) => <p>{paragraph}</p>)}
+    {overview.map((paragraph) => <p class="mb-7 last:mb-0">{paragraph}</p>)}
 </div>
 <div class="md:col-span-2 mt-6 md:mt-0">
     <h2
