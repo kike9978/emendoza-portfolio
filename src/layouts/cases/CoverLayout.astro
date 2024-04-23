@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import image1 from "../../assets/studies/dashboard-redesign/dashboard-redesign01.png";
+
+const { titleCase, overview, roles, date, imgSrc } = Astro.props;
+---
+
+<h1
+    class="text-[52px] font-bold leading-[67.60px] mt-12 mb-6 md:mb-20 md:col-span-8 md:col-start-2 font-heading"
+>
+    {titleCase}
+</h1>
+<div class="md:col-span-6 md:col-start-2">
+    <h2
+        class="text-cyan-950 text-opacity-80 text-base font-normal font-heading leading-snug"
+    >
+        Overview
+    </h2>
+    {overview.map((paragraph) => <p>{paragraph}</p>)}
+</div>
+<div class="md:col-span-2 mt-6 md:mt-0">
+    <h2
+        class="text-cyan-950 text-opacity-80 text-base font-normal font-heading leading-snug"
+    >
+        Role
+    </h2>
+    <ul>
+        {roles.map((role) => <li class="first:font-bold">{role}</li>)}
+    </ul>
+</div>
+
+<div class="md:col-span-2 mt-6 md:mt-0">
+    <h2
+        class="text-cyan-950 text-opacity-80 text-base font-normal font-heading leading-snug"
+    >
+        Date
+    </h2>
+    <div>2022 - 2024</div>
+</div>
+<small
+    class="md:col-start-2 md:col-span-3 text-cyan-950 text-opacity-70 text-sm font-normal leading-[22.82px]"
+>
+    *Designs are blurred due to NDA
+</small>
+
+<Image
+    class="col-start-1 md:col-span-12 md:mb-28 max-w-[100vw] md:max-w-[calc(100vw_-_1rem)] relative -left-4 md:-left-7"
+    src={image1}
+    alt="An alley of lettuce hydroponic farm"
+/>
