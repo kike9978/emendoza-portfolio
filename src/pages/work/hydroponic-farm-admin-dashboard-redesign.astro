@@ -10,6 +10,7 @@ import duckVector from "../../assets/resting-duck.svg";
 import { Image } from "astro:assets";
 import CaseLayout from "../../layouts/CaseLayout.astro";
 import FullWidthImage from "../../components/cases/FullWidthImage.astro";
+import FullWidthTextBG from "../../components/cases/FullWidthTextBG.astro";
 
 const caseCover = {
     titleCase: "Hydroponic Farm Admin Dashboard Redesign",
@@ -72,7 +73,7 @@ const caseCover = {
         >
             User-Centered Solutions
         </h2>
-        <p class="text-cyan-950 text-lg font-normal leading-[29.34px]">
+        <p class="text-cyan-950 text-lg font-normal leading-[29.34px] md:mt-7">
             To address these challenges, we implemented a multi-faceted
             approach. Data prioritization based on user roles ensured each
             department could easily find and interpret the most critical
@@ -100,29 +101,11 @@ const caseCover = {
         alt="A set of blurred images of various designs arranged in a diagonal direction"
     />
 
-    <div
-        class="col-start-1 md:col-span-12 bg-slate-300 flex-col justify-center items-start grid grid-cols-1 md:grid-cols-12 gap-4 mb-6 md:mb-28 py-16 w-[100vw] md:w-[calc(100vw_-_1rem)] max-w-[100vw] md:max-w-[calc(100vw_-_1rem)] relative -left-4 md:-left-7 px-4 md:px-0"
-    >
-        <h2
-            class="text-[22px] font-bold font-heading leading-7 md:col-start-4 md:col-span-6"
-        >
-            Building for the Future
-        </h2>
-        <p
-            class="text-lg font-normal leading-[29.34px] md:col-start-4 md:col-span-6"
-        >
-            The redesigned platform wasn't just about aesthetics; it was about
-            building a solid foundation for future growth. We established a
-            comprehensive design system with reusable UI components and
-            consistent interaction patterns. This ensured a cohesive user
-            experience across the entire platform. Responsive design principles
-            were also incorporated, guaranteeing optimal usability on desktops
-            and tablets, catering to diverse work environments. Throughout the
-            process, close collaboration with developers was maintained,
-            ensuring technical feasibility and a seamless transition from design
-            to implementation.
-        </p>
-    </div>
+    <FullWidthTextBG
+        heading="Building for the Future"
+        text="The redesigned platform wasn't just about aesthetics; it was about building a solid foundation for future growth. We established a comprehensive design system with reusable UI components and consistent interaction patterns. This ensured a cohesive user experience across the entire platform. Responsive design principles were also incorporated, guaranteeing optimal usability on desktops and tablets, catering to diverse work environments. Throughout the process, close collaboration with developers was maintained, ensuring technical feasibility and a seamless transition from design to implementation."
+    />
+
     <h2
         class="md:col-start-2 md:col-span-4 text-[32px] font-bold font-heading leading-[40.96px]"
     >

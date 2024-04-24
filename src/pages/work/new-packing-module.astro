@@ -1,0 +1,139 @@
+---
+import CoverLayout from "../../layouts/cases/CoverLayout.astro";
+import CaseLayout from "../../layouts/CaseLayout.astro";
+
+import image3 from "../../assets/studies/dashboard-redesign/dashboard-redesign03.png";
+
+import image1 from "../../assets/studies/packaging-admin/packaging-admin01.png";
+import { Image } from "astro:assets";
+import IconWithTextContainer from "../../components/cases/IconWithTextContainer.astro";
+
+const caseCover = {
+    titleCase: "New Packing Module for Farm Management",
+    roles: [
+        "UX Design",
+        "Visual Design",
+        "Information architecture",
+        "Workshop facilitator",
+        "UX Writing",
+        "Prototyping",
+        "Testing",
+    ],
+    overview: [
+        "A major hydroponic farm supplier tasked us with creating a brand new module for their existing farm management platform. This module would specifically address the packing and shipping processes for their products, aiming to streamline communication and task allocation between the shipment and packing crews.",
+        "As UX designer, information architect, and user researcher, I played a pivotal role in crafting this new module.  I spearheaded user understanding through workshops and interviews, then translated those insights into a user-friendly and efficient design solution.",
+    ],
+    date: "2023 - 2024",
+    imgAlt: "A photo of a hydroponic lettuce farm greenhouse",
+};
+---
+
+<CaseLayout title={caseCover.titleCase}>
+    <CoverLayout
+        roles={caseCover.roles}
+        titleCase={caseCover.titleCase}
+        overview={caseCover.overview}
+        date={caseCover.date}
+        coverImg={image1}
+        imgAlt={caseCover.imgAlt}
+    />
+    <h2
+        class="md:col-span-4 md:col-start-2 text-[32px] font-bold font-heading leading-[40.96px] mt-6 md:mt-0"
+    >
+        Challenges and Current Landscape
+    </h2>
+    <p
+        class="md:col-span-6 text-cyan-950 text-lg font-normal leading-[29.34px]"
+    >
+        While the farm already had a platform for managing other aspects of
+        their operation, the packing and shipping processes relied heavily on a
+        patchwork of spreadsheets and informal messaging. This led to
+        inefficiencies, communication breakdowns, and a lack of real-time
+        visibility into progress and potential issues.
+    </p>
+    <div class="md:col-start-2 md:col-span-4 mt-6 md:mt-0">
+        <h2
+            class="text-cyan-950 text-[32px] font-bold font-heading leading-[40.96px]"
+        >
+            Embracing User-Centered Design
+        </h2>
+        <p class="text-cyan-950 text-lg font-normal leading-[29.34px] md:mt-7">
+            To ensure the new module met the specific needs of the farm's
+            workflow, we prioritized user-centered design principles. This
+            involved conducting workshops and user interviews with key
+            stakeholders, particularly the shipment leader and packing leader,
+            who would be the primary users of the module. Through these
+            sessions, we aimed to gain a deep understanding of their daily
+            tasks, pain points, and desired functionalities.
+        </p>
+    </div>
+    <div
+        class="md:col-start-7 md:col-span-5 place-self-center md:max-w-full flex-col flex justify-center items-center mt-6 md:mt-0"
+    >
+        <Image
+            src={image3}
+            class="max-w-[60%]"
+            alt="A blurred image of a mobile design for a form"
+        />
+    </div>
+    <h2
+        class="md:col-span-4 md:col-start-2 text-[32px] font-bold font-heading leading-[40.96px] mt-6 md:mt-0"
+    >
+        Deep User Understanding
+    </h2>
+    <p
+        class="md:col-span-6 text-cyan-950 text-lg font-normal leading-[29.34px]"
+    >
+        Through workshops and user interviews, we delved into the user
+        workflows, analyzing the vast spreadsheets used to manage tasks. This
+        revealed a complex, real-world process far removed from the initial
+        platform's simplified model. By understanding user pain points and their
+        daily routines, we could redefine the critical tasks performed by the
+        shipment and packing leaders
+    </p>
+    <h3>Shipment Leader</h3>
+    <p>
+        Receive client orders with product details, packaging types, client
+        information, and due dates.
+    </p>
+    <p>Negotiate adjustments with clients if harvest yields fall short.</p>
+    <h3>Packing Leader</h3>
+    <p>
+        Assign greenhouses based on anticipated harvest data for ordered
+        products.
+    </p>
+
+    <p>Allocate packing locations based on physical constraints.</p>
+
+    <p>Split items according to packing schedules for the crew.</p>
+
+    <p>
+        Monitor packing progress in real-time, identifying potential delays and
+        missing items.
+    </p>
+
+    <p>Communicate with the shipment leader if adjustments are needed.</p>
+    <h2
+        class="md:col-span-4 md:col-start-2 text-[32px] font-bold font-heading leading-[40.96px] mt-6 md:mt-0"
+    >
+        Identifying Gaps and Introducing New Features
+    </h2>
+    <p
+        class="md:col-span-6 text-cyan-950 text-2xl font-normal leading-[29.34px]"
+    >
+        This deep dive into user needs also exposed the need for features not
+        present in the initial design, such as:
+    </p>
+    <IconWithTextContainer
+        text="Real-time packing registration by a dedicated packing line leader."
+    />
+    <IconWithTextContainer
+        text="Past week packing management and potential overpacking identification."
+    />
+    <IconWithTextContainer
+        text="Greenhouse assignment based on requested product availability."
+    />
+    <IconWithTextContainer
+        text="Packing status updates for individual items and entire shipment orders."
+    />
+</CaseLayout>
