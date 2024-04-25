@@ -93,7 +93,7 @@ const caseCover = {
     >
         <Image
             src={image3}
-            class="max-w-[60%]"
+            class="max-w-[60%] md:col-start-7 col-span-5"
             alt="A blurred image of a mobile design for a form"
         />
     </div>
@@ -113,30 +113,39 @@ const caseCover = {
         daily routines, we could redefine the critical tasks performed by the
         shipment and packing leaders
     </p>
-    <h3>Shipment Leader</h3>
-    <p>
-        Receive client orders with product details, packaging types, client
-        information, and due dates.
-    </p>
-    <p>Negotiate adjustments with clients if harvest yields fall short.</p>
-    <Image src={image5} alt="A cenit shot of a truck station" />
-    <Image src={image6} alt="A photo of a screen with numbers" />
-    <h3>Packing Leader</h3>
-    <p>
-        Assign greenhouses based on anticipated harvest data for ordered
-        products.
-    </p>
 
-    <p>Allocate packing locations based on physical constraints.</p>
-
-    <p>Split items according to packing schedules for the crew.</p>
-
-    <p>
-        Monitor packing progress in real-time, identifying potential delays and
-        missing items.
-    </p>
-
-    <p>Communicate with the shipment leader if adjustments are needed.</p>
+    <div class="md:col-start-1 md:col-span-5">
+        <h3 class="font-heading text-2xl">Shipment Leader</h3>
+        <p>
+            Receive client orders with product details, packaging types, client
+            information, and due dates.
+        </p>
+        <p>Negotiate adjustments with clients if harvest yields fall short.</p>
+    </div>
+    <Image
+        src={image5}
+        alt="A cenit shot of a truck station"
+        class="md:col-start-7 md:col-span-5"
+    />
+    <Image
+        src={image6}
+        alt="A photo of a screen with numbers"
+        class="md:col-start-1 md:col-span-5"
+    />
+    <div class="md:col-start-7 md:col-span-5">
+        <h3 class="font-heading text-2xl">Packing Leader</h3>
+        <p>
+            Assign greenhouses based on anticipated harvest data for ordered
+            products.
+        </p>
+        <p>Allocate packing locations based on physical constraints.</p>
+        <p>Split items according to packing schedules for the crew.</p>
+        <p>
+            Monitor packing progress in real-time, identifying potential delays
+            and missing items.
+        </p>
+        <p>Communicate with the shipment leader if adjustments are needed.</p>
+    </div>
     <FullWidthImage src={image7} alt="A screenshot of a various user flows" />
     <h2
         class="md:col-span-4 md:col-start-2 text-[32px] font-bold font-heading leading-[40.96px] mt-6 md:mt-0"
@@ -151,6 +160,7 @@ const caseCover = {
     </p>
     <IconWithTextContainer
         text="Real-time packing registration by a dedicated packing line leader."
+        className="md:col-start-2"
     />
     <IconWithTextContainer
         text="Past week packing management and potential overpacking identification."
@@ -178,53 +188,84 @@ const caseCover = {
         every stage. We created low-fidelity prototypes to test various
         features, including:
     </p>
-    <Image src={image8} alt="A screenshot of the system" />
-    <Image src={image9} alt="A screenshot of the system" />
-    <Image src={image10} alt="A screenshot of the system" />
-    <Image src={image11} alt="A screenshot of the system" />
+    <div
+        class="flex flex-col md:flex-row md:col-start-2 md:col-span-10 gap-2 h-[100px]"
+    >
+        <Image src={image8} alt="A screenshot of the system" class="grow-0" />
+        <Image src={image9} alt="A screenshot of the system" class="grow-0" />
+        <Image src={image10} alt="A screenshot of the system" class="grow-0" />
+    </div>
+    <Image
+        src={image11}
+        alt="A screenshot of the system"
+        class="md:col-start-2 md:col-span-5"
+    />
 
-    <h3>Greenhouse Selection</h3>
-    <p>
-        We evaluated and tested various iterations for assigning greenhouses,
-        ultimately selecting a dropdown menu that prioritized products matching
-        user requirements. Visual cues were implemented to highlight unassigned
-        items, ensuring complete planning before proceeding.
-    </p>
-    <Image src={image12} alt="A screenshot of the system" />
-    <Image src={image13} alt="A screenshot of the system" />
-    <Image src={image14} alt="A screenshot of the system" />
+    <div class="md:col-start-7 md:col-span-5">
+        <h3>Greenhouse Selection</h3>
+        <p>
+            We evaluated and tested various iterations for assigning
+            greenhouses, ultimately selecting a dropdown menu that prioritized
+            products matching user requirements. Visual cues were implemented to
+            highlight unassigned items, ensuring complete planning before
+            proceeding.
+        </p>
+    </div>
+    <div class="flex md:flex-row flex-col md:col-start-1 md:col-span-10">
+        <Image src={image12} alt="A screenshot of the system" />
+        <Image src={image13} alt="A screenshot of the system" />
+        <Image src={image14} alt="A screenshot of the system" />
+    </div>
 
-    <h3>Cold Chamber Management</h3>
-    <p>
-        The cold chamber feature allows for managing packed items from previous
-        weeks and identifying potential overpacking situations.
-    </p>
-    <h3>Packing Planning</h3>
-    <p>
-        We explored drag-and-drop functionalities for planning packing
-        schedules, ensuring the interface facilitated clear communication of
-        task requirements.
-    </p>
-    <Image src={image15} alt="A screenshot of the system" />
-    <Image src={image16} alt="A screenshot of the system" />
-    <Image src={image17} alt="A screenshot of the system" />
-    <Image src={image18} alt="A screenshot of the system" />
-    <Image src={image19} alt="A screenshot of the system" />
+    <div class="md:col-span-5 md:col-start-2">
+        <h3>Cold Chamber Management</h3>
+        <p>
+            The cold chamber feature allows for managing packed items from
+            previous weeks and identifying potential overpacking situations.
+        </p>
+    </div>
+    <div class="md:col-span-5 md:col-start-7">
+        <h3>Packing Planning</h3>
+        <p>
+            We explored drag-and-drop functionalities for planning packing
+            schedules, ensuring the interface facilitated clear communication of
+            task requirements.
+        </p>
+    </div>
+    <div class="flex md:flex-row flex-col md:col-start-1 md:col-span-10">
+        <Image src={image15} alt="A screenshot of the system" />
+        <Image src={image16} alt="A screenshot of the system" />
+        <Image src={image17} alt="A screenshot of the system" />
+    </div>
+    <Image
+        src={image18}
+        alt="A screenshot of the system"
+        class="md:col-span-10 md:col-start-1"
+    />
+    <Image
+        src={image19}
+        alt="A screenshot of the system"
+        class="md:col-start-1 col-span-5"
+    />
 
-    <h3>Packing Registration</h3>
-    <p>
-        We iterated on the design for real-time packing registration, ensuring
-        the packing line leader had all the necessary information for efficient
-        data entry.
-    </p>
-    <h3>Alerts and Notifications</h3>
-    <p>
-        We carefully designed alerts and notifications to provide users with the
-        information they needed without overwhelming them. Overwhelmed users
-        struggle to be productive.
-    </p>
-    <Image src={image20} alt="A screenshot of the system" />
-    <Image src={image21} alt="A screenshot of the system" />
+    <div class="md:col-span-5 md:col-start-7">
+        <h3>Packing Registration</h3>
+        <p>
+            We iterated on the design for real-time packing registration,
+            ensuring the packing line leader had all the necessary information
+            for efficient data entry.
+        </p>
+        <h3>Alerts and Notifications</h3>
+        <p>
+            We carefully designed alerts and notifications to provide users with
+            the information they needed without overwhelming them. Overwhelmed
+            users struggle to be productive.
+        </p>
+        <div class="flex md:flex-row flex-col">
+            <Image src={image20} alt="A screenshot of the system" />
+            <Image src={image21} alt="A screenshot of the system" />
+        </div>
+    </div>
 
     <div
         class="flex justify-center items-center flex-col md:col-span-6 md:col-start-4"
