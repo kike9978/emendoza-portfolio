@@ -1,8 +1,8 @@
 ---
-const { text, className } = Astro.props;
+const { text, className, icon } = Astro.props;
 ---
 
 <article class=`flex flex-col  ${className? className : ""}`>
-    <div class="w-10 h-10 bg-black"></div>
+    <img src={icon.src} alt="icon" class="w-10 h-10" />
     <p>{text}</p>
 </article>

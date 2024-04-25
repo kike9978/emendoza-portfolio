@@ -23,6 +23,12 @@ import image18 from "../../assets/studies/packaging-admin/product-packing17.png"
 import image19 from "../../assets/studies/packaging-admin/product-packing18.png";
 import image20 from "../../assets/studies/packaging-admin/product-packing19.png";
 import image21 from "../../assets/studies/packaging-admin/product-packing20.png";
+
+import orders from "../../assets/studies/packaging-admin/orders.svg";
+import inventory from "../../assets/studies/packaging-admin/inventory.svg";
+import house from "../../assets/studies/packaging-admin/house_siding.svg";
+import clock from "../../assets/studies/packaging-admin/clock_loader_40.svg";
+
 import { Image } from "astro:assets";
 import IconWithTextContainer from "../../components/cases/IconWithTextContainer.astro";
 import FullWidthTextBG from "../../components/cases/FullWidthTextBG.astro";
@@ -125,12 +131,12 @@ const caseCover = {
     <Image
         src={image5}
         alt="A cenit shot of a truck station"
-        class="md:col-start-7 col-start-1 md:col-span-5"
+        class="md:col-start-7 col-start-1 md:col-span-5 -rotate-3 max-w-[50%] mx-auto"
     />
     <Image
         src={image6}
         alt="A photo of a screen with numbers"
-        class="md:col-start-1 col-start-1 md:col-span-5"
+        class="md:col-start-1 col-start-1 md:col-span-5 rotate-3 max-w-[50%] mx-auto"
     />
     <div class="md:col-start-7 col-start-1 md:col-span-5">
         <h3 class="font-heading text-2xl">Packing Leader</h3>
@@ -163,16 +169,19 @@ const caseCover = {
     >
         <IconWithTextContainer
             text="Real-time packing registration by a dedicated packing line leader."
-            className="md:col-start-2"
+            icon={orders}
         />
         <IconWithTextContainer
             text="Past week packing management and potential overpacking identification."
+            icon={inventory}
         />
         <IconWithTextContainer
             text="Greenhouse assignment based on requested product availability."
+            icon={house}
         />
         <IconWithTextContainer
             text="Packing status updates for individual items and entire shipment orders."
+            icon={clock}
         />
     </div>
     <FullWidthTextBG
@@ -284,7 +293,7 @@ const caseCover = {
     <Image
         src={image19}
         alt="A screenshot of the system"
-        class="md:col-start-1 col-span-1 md:col-span-5"
+        class="md:col-start-1 col-span-1 md:col-span-5 max-w-[50%] mx-auto"
     />
 
     <div class="col-start-1 md:col-span-5 md:col-start-7">
