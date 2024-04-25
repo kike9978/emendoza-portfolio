@@ -5,25 +5,86 @@ const devProjects = [
   {name: "Mexican recipes",
   site: "https://recetasmexicanas.netlify.app/",
   repository: "https://github.com/kike9978/recetario-mexicano",
+  description:"A collection of Mexican recipes",
   techonologies: ["ReactJS","Nodejs"],
 },
   {name: "Restaurant page",
   site: "https://ktop-restaurant-page.netlify.app/",
   repository: "https://github.com/kike9978/top-restaurant-page",
+  description:"A collection of Mexican recipes",
   techonologies: ["ReactJS","Nodejs"],
 },
   {name: "Tic Tac Toe",
   site: "https://topjsgatok.netlify.app/",
   repository: "https://github.com/kike9978/js-game-test",
+  description:"A collection of Mexican recipes",
   techonologies: ["ReactJS","Nodejs"],
 },
   {name: "Course compendium",
   site: "na",
   repository: "https://github.com/kike9978/personal-course-library",
+  description:"A collection of Mexican recipes",
   techonologies: ["Electron","React", "Vite", "Electron-vite"],
+},
+  {name: "Calculator",
+  site: "https://k-calculator.netlify.app/",
+  repository: "https://github.com/kike9978/calculator",
+  description:"A collection of Mexican recipes",
+  techonologies: ["Electron","React", "Vite", "Electron-vite"],
+},
+  {name: "Cofee shop website",
+  site: "https://k-patio-cafe-lp.netlify.app/",
+  repository: "https://github.com/kike9978/patio-cafe-lp",
+  description:"A collection of Mexican recipes",
+  techonologies: ["Electron","React", "Vite", "Electron-vite"],
+},
+  {name: "Responsive product card",
+  site: "https://fem-product-review-card-component.netlify.app/",
+  repository: "https://github.com/kike9978/fem-product-review-card",
+  description:"A collection of Mexican recipes",
+  techonologies: ["Electron","React", "Vite", "Electron-vite"],
+},
+  {name: "Book library",
+  site: "https://ktoplibrary.netlify.app/",
+  repository: "https://github.com/kike9978/top-project-library",
+  description:"A collection of Mexican recipes",
+  techonologies: ["Electron","React", "Vite", "Electron-vite"],
+},
+  {name: "Pixel Art Maker",
+  site: "https://k-pixel-art.netlify.app/",
+  repository: "https://github.com/kike9978/pixel-art",
+  description:"A collection of Mexican recipes",
+  techonologies: ["Electron","React", "Vite", "Electron-vite"],
+},
+  {name: "Rock, Paper, Scissors",
+  site: "https://k-piedra-papel-tijeras.netlify.app/",
+  repository: "https://github.com/kike9978/rock-paper-scissors",
+  description:"A collection of Mexican recipes",
+  techonologies: ["Electron","React", "Vite", "Electron-vite"],
+},
+  {name: "Naves chidas",
+  site: "https://colombofilo.itch.io/naves-chidas",
+  repository: "NA",
+  description:"A collection of Mexican recipes",
+  techonologies: ["Unity","Photoshop", "Maya"],
 },
 ]
 ---
 <BaseLayout title="Dev mode">
-{devProjects.map(project => <div><h2>{project.name}</h2><a href={project.site} target="_blank">Live site</a><a href={project.repository} target="_blank">Repository</a></div>)}
+<div class="flex gap-2 flex-wrap">
+  {devProjects.map(project => {
+    return <div class="p-4 bg-blue-50 rounded-sm">
+      <img src="./" alt="">
+    <h2 class="font-heading font-bold text-2xl">{project.name}</h2>
+    <p>{project.description}</p>
+    <a href={project.site} target="_blank">Live site</a>
+    <a href={project.repository} target="_blank">Repository</a>
+    <p>Techonologies:</p>
+    <div class="flex gap-2 flex-wrap">
+      {project.techonologies.map(techonology => {
+        return <div><span class="rounded-sm bg-teal-800 text-white">{techonology}</span></div>
+      })}
+    </div>
+    </div>})}
+</div>
 </BaseLayout>
