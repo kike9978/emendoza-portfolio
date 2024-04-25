@@ -28,6 +28,7 @@ import orders from "../../assets/studies/packaging-admin/orders.svg";
 import inventory from "../../assets/studies/packaging-admin/inventory.svg";
 import house from "../../assets/studies/packaging-admin/house_siding.svg";
 import clock from "../../assets/studies/packaging-admin/clock_loader_40.svg";
+import duckLeg from "../../assets/studies/packaging-admin/duck-leg.svg";
 
 import { Image } from "astro:assets";
 import IconWithTextContainer from "../../components/cases/IconWithTextContainer.astro";
@@ -77,7 +78,11 @@ const caseCover = {
         inefficiencies, communication breakdowns, and a lack of real-time
         visibility into progress and potential issues.
     </p>
-    <FullWidthImage src={image2} alt="UX audit of old platform" />
+    <FullWidthImage
+        src={image2}
+        alt="UX audit of old platform"
+        className="my-12 md:my-28"
+    />
     <div class="md:col-start-2 col-start-1 md:col-span-4 mt-6 md:mt-0">
         <h2
             class="text-cyan-950 text-[32px] font-bold font-heading leading-[40.96px]"
@@ -99,11 +104,15 @@ const caseCover = {
     >
         <Image
             src={image3}
-            class="max-w-[60%] md:col-start-7 col-span-5"
+            class="md:col-start-7 col-span-5"
             alt="A blurred image of a mobile design for a form"
         />
     </div>
-    <FullWidthImage src={image4} alt="A set of exploration screens" />
+    <FullWidthImage
+        src={image4}
+        alt="A set of exploration screens"
+        className="my-12 md:my-28"
+    />
     <h2
         class="col-start-1 md:col-span-4 md:col-start-2 text-[32px] font-bold font-heading leading-[40.96px] mt-6 md:mt-0"
     >
@@ -120,39 +129,65 @@ const caseCover = {
         shipment and packing leaders
     </p>
 
-    <div class="md:col-start-1 col-start-1 md:col-span-5">
-        <h3 class="font-heading text-2xl">Shipment Leader</h3>
-        <p>
-            Receive client orders with product details, packaging types, client
-            information, and due dates.
-        </p>
-        <p>Negotiate adjustments with clients if harvest yields fall short.</p>
+    <div
+        class="flex flex-col-reverse md:flex-row md:col-start-2 col-start-1 md:col-span-10 items-center"
+    >
+        <div class="mt-10 md:mt-24 basis-[50%]">
+            <h3 class="font-heading text-base mb-2">Shipment Leader</h3>
+            <p>
+                Receive client orders with product details, packaging types,
+                client information, and due dates.
+            </p>
+            <p class="mt-10">
+                Negotiate adjustments with clients if harvest yields fall short.
+            </p>
+        </div>
+        <div class="basis-[50%]">
+            <Image
+                src={image5}
+                alt="A cenit shot of a truck station"
+                class="md:col-start-7 col-start-1 md:col-span-5 -rotate-3 mx-auto mt-24 max-w-[300px]"
+            />
+        </div>
     </div>
-    <Image
-        src={image5}
-        alt="A cenit shot of a truck station"
-        class="md:col-start-7 col-start-1 md:col-span-5 -rotate-3 max-w-[50%] mx-auto"
-    />
-    <Image
-        src={image6}
-        alt="A photo of a screen with numbers"
-        class="md:col-start-1 col-start-1 md:col-span-5 rotate-3 max-w-[50%] mx-auto"
-    />
-    <div class="md:col-start-7 col-start-1 md:col-span-5">
-        <h3 class="font-heading text-2xl">Packing Leader</h3>
-        <p>
-            Assign greenhouses based on anticipated harvest data for ordered
-            products.
-        </p>
-        <p>Allocate packing locations based on physical constraints.</p>
-        <p>Split items according to packing schedules for the crew.</p>
-        <p>
-            Monitor packing progress in real-time, identifying potential delays
-            and missing items.
-        </p>
-        <p>Communicate with the shipment leader if adjustments are needed.</p>
+    <div
+        class="flex flex-col md:flex-row md:col-start-2 col-start-1 md:col-span-10 items-center mt-14"
+    >
+        <div class="basis-[50%]">
+            <Image
+                src={image6}
+                alt="A photo of a screen with numbers"
+                class="md:col-start-1 col-start-1 md:col-span-5 rotate-3 mx-auto max-w-[300px]"
+            />
+        </div>
+        <div class="md:col-start-7 col-start-1 md:col-span-5 basis-[50%]">
+            <h3 class="font-heading text-base mb-2 mt-10 md:mt-0">
+                Packing Leader
+            </h3>
+            <p>
+                Assign greenhouses based on anticipated harvest data for ordered
+                products.
+            </p>
+            <p class="mt-10">
+                Allocate packing locations based on physical constraints.
+            </p>
+            <p class="mt-10">
+                Split items according to packing schedules for the crew.
+            </p>
+            <p class="mt-10">
+                Monitor packing progress in real-time, identifying potential
+                delays and missing items.
+            </p>
+            <p class="mt-10">
+                Communicate with the shipment leader if adjustments are needed.
+            </p>
+        </div>
     </div>
-    <FullWidthImage src={image7} alt="A screenshot of a various user flows" />
+    <FullWidthImage
+        src={image7}
+        alt="A screenshot of a various user flows"
+        className="my-12 md:my-28"
+    />
     <h2
         class="col-start-1 md:col-span-4 md:col-start-2 text-[32px] font-bold font-heading leading-[40.96px] mt-6 md:mt-0"
     >
@@ -165,7 +200,7 @@ const caseCover = {
         present in the initial design, such as:
     </p>
     <div
-        class="md:col-start-2 flex flex-col md:flex-row col-span-1 md:col-span-10"
+        class="md:col-start-2 flex flex-col md:flex-row col-span-1 md:col-span-10 my-12 md:my-28 gap-14"
     >
         <IconWithTextContainer
             text="Real-time packing registration by a dedicated packing line leader."
@@ -188,6 +223,7 @@ const caseCover = {
         heading="Continuous Collaboration and Iteration"
         text="Throughout the project, clear communication and close collaboration were essential. We maintained constant communication with the development team, meticulously documenting user needs and functionalities to avoid potential roadblocks during development."
         color="bg-[#D1D8CC]"
+        className="mt-12 md:mt-28"
     />
     <h2
         class="col-start-1 md:col-span-4 md:col-start-2 text-[32px] font-bold font-heading leading-[40.96px] mt-6 md:mt-0"
@@ -202,7 +238,7 @@ const caseCover = {
         features, including:
     </p>
     <div
-        class="flex flex-col md:flex-row md:col-start-2 col-start-1 md:col-span-10 gap-2"
+        class="flex flex-col md:flex-row md:col-start-2 col-start-1 md:col-span-10 gap-2 mt-16"
     >
         <div class="hidden md:block">
             <Image
@@ -234,7 +270,9 @@ const caseCover = {
     />
 
     <div class="md:col-start-7 col-start-1 md:col-span-5">
-        <h3 class="font-heading text-base mb-2 mt-16">Greenhouse Selection</h3>
+        <h3 class="font-heading text-base mb-2 mt-10 md:mt-16">
+            Greenhouse Selection
+        </h3>
         <p>
             We evaluated and tested various iterations for assigning
             greenhouses, ultimately selecting a dropdown menu that prioritized
@@ -244,7 +282,7 @@ const caseCover = {
         </p>
     </div>
     <div
-        class="flex flex-col md:flex-row md:col-start-2 col-start-1 md:col-span-10 gap-2 mb-16"
+        class="flex flex-col md:flex-row md:col-start-2 col-start-1 md:col-span-10 gap-2 mb-16 mt-10 md:mt-0"
     >
         <div class="">
             <Image src={image12} alt="A screenshot of the system" />
@@ -264,7 +302,7 @@ const caseCover = {
             previous weeks and identifying potential overpacking situations.
         </p>
     </div>
-    <div class="col-start-1 md:col-span-5 md:col-start-7">
+    <div class="col-start-1 md:col-span-5 md:col-start-7 mt-10 md:mt-0">
         <h3 class="font-heading text-base mb-2">Packing Planning</h3>
         <p>
             We explored drag-and-drop functionalities for planning packing
@@ -288,28 +326,32 @@ const caseCover = {
     <Image
         src={image18}
         alt="A screenshot of the system"
-        class="col-start-1 md:col-span-10 md:col-start-2"
+        class="col-start-1 md:col-span-10 md:col-start-2 mb-20"
     />
     <Image
         src={image19}
         alt="A screenshot of the system"
-        class="md:col-start-1 col-span-1 md:col-span-5 max-w-[50%] mx-auto"
+        class="md:col-start-2 col-span-1 md:col-span-5 mx-auto max-w-[80%] m-auto"
     />
 
     <div class="col-start-1 md:col-span-5 md:col-start-7">
-        <h3 class="font-heading text-base mb-2">Packing Registration</h3>
+        <h3 class="font-heading text-base mb-2 mt-10 md:mt-0">
+            Packing Registration
+        </h3>
         <p>
             We iterated on the design for real-time packing registration,
             ensuring the packing line leader had all the necessary information
             for efficient data entry.
         </p>
-        <h3 class="font-heading text-base mb-2">Alerts and Notifications</h3>
+        <h3 class="font-heading text-base mb-2 mt-10">
+            Alerts and Notifications
+        </h3>
         <p>
             We carefully designed alerts and notifications to provide users with
             the information they needed without overwhelming them. Overwhelmed
             users struggle to be productive.
         </p>
-        <div class="flex md:flex-row flex-col">
+        <div class="flex md:flex-row flex-col mt-10 md:mt-20">
             <div class="">
                 <Image src={image20} alt="A screenshot of the system" />
             </div>
@@ -320,8 +362,9 @@ const caseCover = {
     </div>
 
     <div
-        class="flex justify-center items-center flex-col col-start-1 md:col-span-6 md:col-start-4"
+        class="flex justify-center items-center flex-col col-start-1 md:col-span-6 md:col-start-4 mt-28"
     >
+        <img class="w-20 rotate-[2.47deg] mb-11" src={duckLeg.src} />
         <p class="text-lg font-normal leading-[29.34px]">
             User-centered design saved the day! Initial assumptions missed the
             mark, but by prioritizing feedback and iterating, we designed a
@@ -329,6 +372,5 @@ const caseCover = {
             importance of flexibility and a holistic approach, ensuring a
             streamlined solution for everyone involved.
         </p>
-        <!-- <img class="w-20 rotate-[2.47deg] mt-11" src={duckVector.src} /> -->
     </div>
 </CaseLayout>

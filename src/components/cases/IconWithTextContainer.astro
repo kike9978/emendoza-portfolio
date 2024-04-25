@@ -2,7 +2,7 @@
 const { text, className, icon } = Astro.props;
 ---
 
-<article class=`flex flex-col  ${className? className : ""}`>
+<article class=`flex flex-col gap-5 ${className? className : ""}`>
     <img src={icon.src} alt="icon" class="w-10 h-10" />
     <p>{text}</p>
 </article>
