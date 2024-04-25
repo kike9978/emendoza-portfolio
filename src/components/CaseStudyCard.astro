@@ -58,6 +58,11 @@ if (!images[imagePath])
     .stroke {
         -webkit-text-stroke: 10px black;
     }
+    @media (prefers-color-scheme: dark) {
+        .stroke {
+            -webkit-text-stroke: 10px rgb(124, 124, 124);
+        }
+    }
 </style>
 
 <script>
