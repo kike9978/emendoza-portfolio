@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const devProjects = [
+  {name: "Mexican recipes",
+  site: "https://recetasmexicanas.netlify.app/",
+  repository: "https://github.com/kike9978/recetario-mexicano",
+  techonologies: ["ReactJS","Nodejs"],
+},
+  {name: "Restaurant page",
+  site: "https://ktop-restaurant-page.netlify.app/",
+  repository: "https://github.com/kike9978/top-restaurant-page",
+  techonologies: ["ReactJS","Nodejs"],
+},
+  {name: "Tic Tac Toe",
+  site: "https://topjsgatok.netlify.app/",
+  repository: "https://github.com/kike9978/js-game-test",
+  techonologies: ["ReactJS","Nodejs"],
+},
+  {name: "Course compendium",
+  site: "na",
+  repository: "https://github.com/kike9978/personal-course-library",
+  techonologies: ["Electron","React", "Vite", "Electron-vite"],
+},
+]
+---
+<BaseLayout title="Dev mode">
+{devProjects.map(project => <div><h2>{project.name}</h2><a href={project.site} target="_blank">Live site</a><a href={project.repository} target="_blank">Repository</a></div>)}
+</BaseLayout>
