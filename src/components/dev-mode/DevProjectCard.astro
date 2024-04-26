@@ -16,16 +16,14 @@ if (!images[imagePath])
 ---
 
 <article
-    class="bg-gray-50 rounded-lg border-2 border-slate-200 border-solid flex flex-col overflow-hidden"
+    class="bg-gray-50 rounded-lg border-2 border-slate-200 border-solid flex flex-col"
 >
-    <div class="relative svg">
+    <div class="relative svg scale-90">
         <svg
-            width="644"
-            height="200"
-            viewBox="500 -10 400 500"
+            viewBox="0 0 644 560"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="z-10"
+            class="z-10 w-full h-auto"
         >
             <path
                 d="M595.937 12.4959C615.201 15.2017 629.075 29.8508 631.893 48.9772C636.846 82.5423 643.242 142.766 643.242 229.872C643.242 316.978 636.856 377.116 631.903 410.696C629.087 429.803 613.868 444.693 594.7 447.058C553.745 452.105 469.684 459.254 321.873 459.254C174.062 459.254 89.4264 452.063 48.6233 447.01C29.512 444.645 14.3349 429.84 11.4433 410.803C6.55807 378.582 0.500004 320.401 0.5 229.877C0.499996 139.353 6.56281 81.0806 11.4528 48.8795L10.9585 48.8044L11.4528 48.8795C14.3398 29.8654 29.4839 15.0607 48.5713 12.6818L48.5095 12.1856L48.5714 12.6818C89.0601 7.63379 172.664 0.500006 321.873 0.5C408.973 0.499996 563.529 8.76632 595.937 12.4959Z"
@@ -33,12 +31,10 @@ if (!images[imagePath])
                 stroke-width="12"></path>
         </svg>
         <svg
-            width="644"
-            height="200"
-            viewBox="500 -10 400 500"
+            viewBox="0 0 644 560"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="absolute top-0"
+            class="absolute top-0 w-full h-auto"
         >
             <defs>
                 <mask id="svg-mask">
@@ -130,8 +126,8 @@ if (!images[imagePath])
 <script>
     const svgs = document.querySelectorAll(".svg");
     function getRandomDegs() {
-        const deg = Math.random() * 12;
-        const extendedRange = deg - 6;
+        const deg = Math.random() * 10;
+        const extendedRange = deg - 5;
         return extendedRange.toFixed(2) + "deg";
     }
 
