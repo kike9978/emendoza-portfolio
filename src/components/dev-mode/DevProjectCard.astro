@@ -19,9 +19,11 @@ if (!images[imagePath])
     <div class="absolute flex flex-col justify-center items-center h-[95%]">
         <!-- -[radial-gradient(at_center_bottom,_var(--tw-gradient-stops))] from-zinc-100 to-[transparent] -->
         <div
-            class="h-56 md:h-[33%] w-full relative flex flex-col justify-center items-center overflow-hidden"
+            class="h-[33%] md:h-[40%] w-full relative flex flex-col justify-center items-center overflow-hidden"
         >
-            <div class="h-[80%] w-[70%] rounded overflow-hidden top-2 relative">
+            <div
+                class="h-[80%] w-[70%] rounded-sm overflow-hidden top-1 relative shadow-[0_35px_60px_-15px_white]"
+            >
                 <Image
                     src={images[imagePath]()}
                     alt="holi"
@@ -34,7 +36,7 @@ if (!images[imagePath])
                 viewBox="0 0 365 189"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="absolute w-full h-auto top-0"
+                class="absolute w-[95%] h-auto top-0"
             >
                 <path
                     d="M182.755 189C21.1959 189 0.674308 189 0.674308 189C2.30294 111.903 6.55305 64.3204 9.73739 38.6062C11.639 23.2356 23.5464 11.0298 38.8564 8.70436C64.4933 4.81727 110.767 -7.95949e-06 182.751 -7.95945e-06C254.734 -7.95946e-06 301.08 4.82105 326.702 8.71192C341.993 11.0336 353.9 23.2129 355.813 38.5647C359.001 64.1322 364.842 189 364.842 189C364.842 189 318.684 189 182.755 189Z"
@@ -64,7 +66,7 @@ if (!images[imagePath])
                 <path
                     d="M6.67431 195C8.30294 117.903 12.553 70.3204 15.7374 44.6062C17.639 29.2356 29.5464 17.0298 44.8564 14.7044C70.4933 10.8173 116.767 5.99999 188.751 5.99999C260.734 5.99999 307.08 10.8211 332.702 14.7119C347.993 17.0336 359.9 29.2129 361.813 44.5647C365.001 70.1322 370.842 195 370.842 195"
                     stroke="black"
-                    stroke-width="9.5399"></path>
+                    stroke-width="8"></path>
             </svg>
         </div>
         <div
