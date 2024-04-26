@@ -16,7 +16,7 @@ if (!images[imagePath])
     {
         commingSoon && (
             <div class="absolute h-full w-full z-10 bg-[radial-gradient(var(--tw-gradient-stops))] from-[rgba(20,20,20,_1)] to-80% to-[rgba(20,20,20,_0)] flex flex-col items-center justify-center">
-                <p class="text-white font-heading text-5xl text-center font-bold w-11/12">
+                <p class="text-white font-heading text-5xl text-center font-bold w-11/12 uppercase">
                     Comming soon!
                 </p>
             </div>
@@ -38,43 +38,50 @@ if (!images[imagePath])
                     {number}
                 </p>
             </span>
-            {
-                title
-                    .split(" ")
-                    .map((word) => (
-                        <h2 class="bg-black text-white font-heading tracking-[-0.07rem] text-4xl font-bold w-fit leading-[.80em] text-center">
-                            {word}
-                        </h2>
-                    ))
-            }
+            <h2 class="text-center uppercase">
+                {
+                    title
+                        .split(" ")
+                        .map((word) => (
+                            <p class="bg-black text-white mx-auto font-heading tracking-[-0.07rem] text-4xl font-bold w-fit leading-[.80em] text-center">
+                                {word}
+                            </p>
+                        ))
+                }
+            </h2>
         </div>
     </a>
+    <style>
+        .hover {
+            rotate: 0deg !important;
+        }
+
+        .stroke {
+            -webkit-text-stroke: 10px black;
+        }
+        @media (prefers-color-scheme: dark) {
+            .stroke {
+                filter: invert();
+            }
+        }
+    </style>
+
+    <script>
+        const articles = document.querySelectorAll("article");
+        function getRandomDegs() {
+            const deg = Math.random() * 12;
+            const extendedRange = deg - 6;
+            return extendedRange.toFixed(2) + "deg";
+        }
+
+        articles.forEach((article) => {
+            article.style.rotate = getRandomDegs();
+            article.addEventListener("mouseenter", () => {
+                article.classList.add("hover");
+            });
+            article.addEventListener("mouseleave", () => {
+                article.classList.remove("hover");
+            });
+        });
+    </script>
 </article>
-<style>
-    .hover {
-        rotate: 0deg !important;
-    }
-
-    .stroke {
-        -webkit-text-stroke: 10px black;
-    }
-</style>
-
-<script>
-    const articles = document.querySelectorAll("article");
-    function getRandomDegs() {
-        const deg = Math.random() * 12;
-        const extendedRange = deg - 6;
-        return extendedRange.toFixed(2) + "deg";
-    }
-
-    articles.forEach((article) => {
-        article.style.rotate = getRandomDegs();
-        article.addEventListener("mouseenter", () => {
-            article.classList.add("hover");
-        });
-        article.addEventListener("mouseleave", () => {
-            article.classList.remove("hover");
-        });
-    });
-</script>

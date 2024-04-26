@@ -1,0 +1,18 @@
+---
+const { heading, text, color = "bg-slate-300", className } = Astro.props;
+---
+
+<div
+    class=`col-start-1 md:col-span-12 ${color} flex-col justify-center items-start grid grid-cols-1 md:grid-cols-12 gap-4 mb-6 md:mb-28 py-16 w-[100vw] md:w-[calc(100vw_-_1rem)] max-w-[100vw] md:max-w-[calc(100vw_-_1rem)] relative -left-4 md:-left-7 px-4 md:px-0  ${className ? className : ""}`
+>
+    <h2
+        class="text-[22px] font-bold font-heading leading-7 md:col-start-4 md:col-span-6"
+    >
+        {heading}
+    </h2>
+    <p
+        class="text-lg font-normal leading-[29.34px] md:col-start-4 md:col-span-6"
+    >
+        {text}
+    </p>
+</div>
