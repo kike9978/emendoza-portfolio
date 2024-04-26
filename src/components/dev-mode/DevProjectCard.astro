@@ -2,8 +2,6 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
-import imageTest from "/src/assets/peek-a-duck.gif";
-
 const { name, description, site, repository, technologies, imagePath } =
     Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -16,63 +14,35 @@ if (!images[imagePath])
 ---
 
 <article
-    class="bg-gray-50 rounded-lg border-2 border-slate-200 border-solid flex flex-col"
+    class="flex flex-col relative hover:z-10 hover:-translate-y-4 transition-all rotate-3 hover:rotate-0 items-center"
 >
-    <div class="relative svg scale-90">
-        <svg
-            viewBox="0 0 644 560"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="z-10 w-full h-auto"
-        >
-            <path
-                d="M595.937 12.4959C615.201 15.2017 629.075 29.8508 631.893 48.9772C636.846 82.5423 643.242 142.766 643.242 229.872C643.242 316.978 636.856 377.116 631.903 410.696C629.087 429.803 613.868 444.693 594.7 447.058C553.745 452.105 469.684 459.254 321.873 459.254C174.062 459.254 89.4264 452.063 48.6233 447.01C29.512 444.645 14.3349 429.84 11.4433 410.803C6.55807 378.582 0.500004 320.401 0.5 229.877C0.499996 139.353 6.56281 81.0806 11.4528 48.8795L10.9585 48.8044L11.4528 48.8795C14.3398 29.8654 29.4839 15.0607 48.5713 12.6818L48.5095 12.1856L48.5714 12.6818C89.0601 7.63379 172.664 0.500006 321.873 0.5C408.973 0.499996 563.529 8.76632 595.937 12.4959Z"
-                stroke="black"
-                stroke-width="12"></path>
-        </svg>
-        <svg
-            viewBox="0 0 644 560"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="absolute top-0 w-full h-auto"
-        >
-            <defs>
-                <mask id="svg-mask">
-                    <path
-                        d="M596 12C615.5 14.7362 629.539 29.5701 632.388 48.9045C637.344 82.4935 643.742 142.742 643.742 229.872C643.742 317.003 637.354 377.165 632.398 410.769C629.549 430.098 614.153 445.162 594.761 447.554C553.781 452.605 469.699 459.754 321.873 459.754C174.047 459.754 89.3899 452.562 48.5618 447.506C29.2275 445.114 13.8741 430.136 10.949 410.878C6.05953 378.63 -6.09036e-06 320.423 -1.00482e-05 229.877C-1.40061e-05 139.331 6.06427 81.0333 10.9585 48.8046C13.8789 29.5701 29.1989 14.5925 48.5095 12.1858C89.0237 7.13463 172.649 0.000181787 321.873 0.000175264C408.99 0.000171456 563.58 8.26791 596 12Z"
-                        fill="#D9D9D9"
-                        stroke="black"></path>
-                </mask>
-            </defs>
-            <image href={imageTest.src} mask="url(#svg-mask)" class="w-full" />
-        </svg>
-    </div>
-    <img src={images[imagePath]()} alt="" />
-    <div class="bg-zinc-100 h-36 relative overflow-hidden">
-        <Image
-            src={images[imagePath]()}
-            alt="holi"
-            class="w-[80%] object-cover relative top-4 object-top mx-auto rounded-lg shadow-2xl"
-        />
-    </div>
-    <div class="p-4 flex flex-col flex-grow">
-        <div class="flex-grow">
-            <h2 class="font-heading font-bold text-2xl">{name}</h2>
-            <p>{description}</p>
+    <div class="absolute top-16 flex flex-col h-[74%] w-[87%]">
+        <div class="bg-zinc-100 h-56 relative overflow-hidden">
+            <Image
+                src={images[imagePath]()}
+                alt="holi"
+                class="w-[80%] object-cover relative top-4 object-top mx-auto rounded-lg shadow-2xl"
+            />
         </div>
-        <div class="flex flex-col w-full items-end">
-            <div class="flex gap-2 flex-wrap w-full">
-                {
-                    technologies.map((techonology) => {
-                        return (
-                            <div>
-                                <span class="rounded-xl px-2 py-1 bg-slate-100 text-slate-500">
-                                    {techonology}
-                                </span>
-                            </div>
-                        );
-                    })
-                }
+        <div class="py-4 flex flex-col flex-grow">
+            <div class="gap-6 flex flex-col flex-grow">
+                <div class="gap-3 flex flex-col">
+                    <h2 class="font-heading font-bold text-2xl">{name}</h2>
+                    <p>{description}</p>
+                </div>
+                <div class="flex gap-2 flex-wrap w-full">
+                    {
+                        technologies.map((techonology) => {
+                            return (
+                                <div>
+                                    <span class="rounded-xl px-2 py-1 bg-slate-100 text-slate-500">
+                                        {techonology}
+                                    </span>
+                                </div>
+                            );
+                        })
+                    }
+                </div>
             </div>
             <div class="flex gap-1">
                 {
@@ -106,6 +76,20 @@ if (!images[imagePath])
             </div>
         </div>
     </div>
+    <svg
+        width="366"
+        height="512"
+        viewBox="0 0 366 512"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="-z-10 max-w-72 md:max-w-auto"
+    >
+        <path
+            d="M325.927 498.024L325.926 498.024C299.452 501.931 251.788 507 182.755 507C113.721 507 66.1248 501.939 39.639 498.032L39.6386 498.032C26.3912 496.08 16.0718 485.529 14.4334 472.246C10.447 439.904 4.77031 373.26 4.77031 255.886C4.77032 138.512 10.4812 71.4123 14.4712 39.1924L14.4713 39.1919C16.1096 25.9492 26.3697 15.4256 39.5727 13.4202C64.9472 9.573 110.98 4.76994 182.751 4.76994C254.523 4.76994 300.628 9.57698 325.986 13.4278L325.986 13.4278C339.174 15.4302 349.432 25.9316 351.08 39.1546L351.08 39.1548C355.066 71.1204 360.731 137.398 360.731 255.886C360.731 324.977 354.172 447.542 351.229 473.209C349.345 486.459 339.314 496.052 325.927 498.024Z"
+            fill="white"
+            stroke="black"
+            stroke-width="9.5399"></path>
+    </svg>
 </article>
 
 <style>
