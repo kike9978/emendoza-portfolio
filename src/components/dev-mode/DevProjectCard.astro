@@ -49,7 +49,7 @@ if (!images[imagePath])
                     site && (
                         <a
                             title="Live site"
-                            class="bg-teal-800 rounded-md px-2 py-1 text-white hover:bg-teal-900 flex justify-center"
+                            class="rounded-md px-2 py-1 flex justify-center text-blue-500 hover:text-blue-600"
                             href={site}
                             target="_blank"
                         >
@@ -82,7 +82,7 @@ if (!images[imagePath])
         viewBox="0 0 366 512"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="-z-10 max-w-72 md:max-w-auto"
+        class="-z-10 max-w-72 h-auto md:max-w-auto"
     >
         <path
             d="M325.927 498.024L325.926 498.024C299.452 501.931 251.788 507 182.755 507C113.721 507 66.1248 501.939 39.639 498.032L39.6386 498.032C26.3912 496.08 16.0718 485.529 14.4334 472.246C10.447 439.904 4.77031 373.26 4.77031 255.886C4.77032 138.512 10.4812 71.4123 14.4712 39.1924L14.4713 39.1919C16.1096 25.9492 26.3697 15.4256 39.5727 13.4202C64.9472 9.573 110.98 4.76994 182.751 4.76994C254.523 4.76994 300.628 9.57698 325.986 13.4278L325.986 13.4278C339.174 15.4302 349.432 25.9316 351.08 39.1546L351.08 39.1548C355.066 71.1204 360.731 137.398 360.731 255.886C360.731 324.977 354.172 447.542 351.229 473.209C349.345 486.459 339.314 496.052 325.927 498.024Z"
@@ -108,14 +108,14 @@ if (!images[imagePath])
 </style>
 
 <script>
-    const svgs = document.querySelectorAll(".svg");
+    const article = document.querySelectorAll("article");
     function getRandomDegs() {
         const deg = Math.random() * 10;
         const extendedRange = deg - 5;
         return extendedRange.toFixed(2) + "deg";
     }
 
-    svgs.forEach((svg) => {
-        svg.style.rotate = getRandomDegs();
+    article.forEach((article) => {
+        article.style.rotate = getRandomDegs();
     });
 </script>
