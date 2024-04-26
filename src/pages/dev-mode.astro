@@ -31,6 +31,34 @@ const devProjects = [
     show: true,
   },
   {
+    name: "Cofee shop website",
+    site: "https://k-patio-cafe-lp.netlify.app/",
+    repository: "https://github.com/kike9978/patio-cafe-lp",
+    description: "Responsive static webpage for a coffee shop.",
+    technologies: ["HTML", "CSS"],
+    imagePath: "/src/assets/dev-mode/cofee-shop.png",
+    show: true,
+  },
+  {
+    name: "Calculator",
+    site: "https://k-calculator.netlify.app/",
+    repository: "https://github.com/kike9978/calculator",
+    description: "A calculator app made with vanilla JS",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    imagePath: "/src/assets/dev-mode/calculator.png",
+    show: true,
+  },
+
+  {
+    name: "Responsive product card",
+    site: "https://fem-product-review-card-component.netlify.app/",
+    repository: "https://github.com/kike9978/fem-product-review-card",
+    description: "Showcase of a responsive card UI Component",
+    technologies: ["HTML", "CSS"],
+    imagePath: "/src/assets/dev-mode/product-review-card.png",
+    show: true,
+  },
+  {
     name: "Mexican recipes",
     site: "https://recetasmexicanas.netlify.app/",
     repository: "https://github.com/kike9978/recetario-mexicano",
@@ -57,15 +85,7 @@ const devProjects = [
     imagePath: "/src/assets/dev-mode/tic-tac-toe.png",
     show: true,
   },
-  {
-    name: "Cofee shop website",
-    site: "https://k-patio-cafe-lp.netlify.app/",
-    repository: "https://github.com/kike9978/patio-cafe-lp",
-    description: "Responsive static webpage for a coffee shop.",
-    technologies: ["HTML", "CSS"],
-    imagePath: "/src/assets/dev-mode/cofee-shop.png",
-    show: true,
-  },
+
   {
     name: "Course compendium",
     site: null,
@@ -76,25 +96,7 @@ const devProjects = [
     imagePath: "/src/assets/dev-mode/biblioteca-de-cursos.png",
     show: true,
   },
-  {
-    name: "Calculator",
-    site: "https://k-calculator.netlify.app/",
-    repository: "https://github.com/kike9978/calculator",
-    description: "A calculator app made with vanilla JS",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    imagePath: "/src/assets/dev-mode/calculator.png",
-    show: true,
-  },
 
-  {
-    name: "Responsive product card",
-    site: "https://fem-product-review-card-component.netlify.app/",
-    repository: "https://github.com/kike9978/fem-product-review-card",
-    description: "Showcase of a responsive card UI Component",
-    technologies: ["HTML", "CSS"],
-    imagePath: "/src/assets/dev-mode/product-review-card.png",
-    show: true,
-  },
   {
     name: "Book library",
     site: "https://ktoplibrary.netlify.app/",
@@ -121,7 +123,9 @@ const devProjects = [
     A collection of my personal dev projects, ranging from web apps, static
     sites and videogames
   </p>
-  <div class="grid grid-cols-4 gap-2">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 w-[min(100%,_1000px)] mx-auto"
+  >
     {
       devProjects.map((project) => {
         return project.show && <DevProjectCard {...project} />;
