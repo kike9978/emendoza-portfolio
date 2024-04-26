@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+const { name, description, site, repository, technologies, imagePath } =
+    Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/dev-mode/*.{jpeg,jpg,png,gif}",
+);
+if (!images[imagePath])
+    throw new Error(
+        `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+    );
+---
+
+<article
+    class="p-4 bg-gray-50 rounded-lg border-2 border-black border-solid flex flex-col"
+>
+    <Image src={images[imagePath]()} alt="holi" class="h-32 object-cover" />
+    <div class="flex-grow">
+        <h2 class="font-heading font-bold text-2xl">{name}</h2>
+        <p>{description}</p>
+    </div>
+    <div class="flex gap-1">
+        {
+            site && (
+                <a
+                    title="Live site"
+                    class="font-bold text-blue-500 hover:text-blue-600"
+                    href={site}
+                    target="_blank"
+                >
+                    <span class="material-symbols-outlined">language</span>
+                </a>
+            )
+        }
+        {
+            repository && (
+                <a
+                    title="Code repository"
+                    class="font-bold text-blue-500 hover:text-blue-600"
+                    href={repository}
+                    target="_blank"
+                >
+                    <span class="material-symbols-outlined">code</span>
+                </a>
+            )
+        }
+    </div>
+    <p>Techonologies:</p>
+    <div class="flex gap-2 flex-wrap">
+        {
+            technologies.map((techonology) => {
+                return (
+                    <div>
+                        <span class="rounded-xl px-2 py-1 bg-slate-200 text-slate-700">
+                            {techonology}
+                        </span>
+                    </div>
+                );
+            })
+        }
+    </div>
+</article>

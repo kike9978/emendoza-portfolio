@@ -1,13 +1,42 @@
 ---
+import DevProjectCard from "../components/dev-mode/DevProjectCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const devProjects = [
+  {
+    name: "Pixel Art Maker",
+    site: "https://k-pixel-art.netlify.app/",
+    repository: "https://github.com/kike9978/pixel-art",
+    description: "A fun and colorful etch-a-sketch",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    imagePath: "/src/assets/dev-mode/pixel-art.png",
+    show: true,
+  },
+  {
+    name: "Rock, Paper, Scissors",
+    site: "https://k-piedra-papel-tijeras.netlify.app/",
+    repository: "https://github.com/kike9978/rock-paper-scissors",
+    description: "The classic game meets a strategy game",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    imagePath: "/src/assets/dev-mode/r-p-s.png",
+    show: true,
+  },
+  {
+    name: "Cool rocket",
+    site: "https://colombofilo.itch.io/naves-chidas",
+    repository: null,
+    description: "A fun space shooter, are you up to the challenge",
+    technologies: ["Unity", "Photoshop", "Maya"],
+    imagePath: "/src/assets/dev-mode/cool-rocket.png",
+    show: true,
+  },
   {
     name: "Mexican recipes",
     site: "https://recetasmexicanas.netlify.app/",
     repository: "https://github.com/kike9978/recetario-mexicano",
     description: "A collection of Mexican recipes",
-    techonologies: ["Astro", "JavaScript", "TailwindCss"],
+    technologies: ["Astro", "JavaScript", "TailwindCss"],
+    imagePath: "/src/assets/dev-mode/r-p-s.png",
     show: false,
   },
   {
@@ -15,7 +44,8 @@ const devProjects = [
     site: "https://ktop-restaurant-page.netlify.app/",
     repository: "https://github.com/kike9978/top-restaurant-page",
     description: "A restaurant static page",
-    techonologies: ["JavaScript", "HTML", "CSS"],
+    technologies: ["JavaScript", "HTML", "CSS"],
+    imagePath: "/src/assets/dev-mode/r-p-s.png",
     show: false,
   },
   {
@@ -23,7 +53,17 @@ const devProjects = [
     site: "https://topjsgatok.netlify.app/",
     repository: "https://github.com/kike9978/js-game-test",
     description: "The classic game made with vanilla javascript",
-    techonologies: ["JavaScript", "HTML", "CSS"],
+    technologies: ["JavaScript", "HTML", "CSS"],
+    imagePath: "/src/assets/dev-mode/tic-tac-toe.png",
+    show: true,
+  },
+  {
+    name: "Cofee shop website",
+    site: "https://k-patio-cafe-lp.netlify.app/",
+    repository: "https://github.com/kike9978/patio-cafe-lp",
+    description: "Responsive static webpage for a coffee shop.",
+    technologies: ["HTML", "CSS"],
+    imagePath: "/src/assets/dev-mode/cofee-shop.png",
     show: true,
   },
   {
@@ -32,7 +72,8 @@ const devProjects = [
     repository: "https://github.com/kike9978/personal-course-library",
     description:
       "A computer application to get access to all of your local courses",
-    techonologies: ["Electron", "React", "Vite", "Electron-vite", "CSS"],
+    technologies: ["Electron", "React", "Vite", "Electron-vite", "CSS"],
+    imagePath: "/src/assets/dev-mode/biblioteca-de-cursos.png",
     show: true,
   },
   {
@@ -40,23 +81,18 @@ const devProjects = [
     site: "https://k-calculator.netlify.app/",
     repository: "https://github.com/kike9978/calculator",
     description: "A calculator app made with vanilla JS",
-    techonologies: ["JavaScript", "HTML", "CSS"],
+    technologies: ["JavaScript", "HTML", "CSS"],
+    imagePath: "/src/assets/dev-mode/calculator.png",
     show: true,
   },
-  {
-    name: "Cofee shop website",
-    site: "https://k-patio-cafe-lp.netlify.app/",
-    repository: "https://github.com/kike9978/patio-cafe-lp",
-    description: "Responsive static webpage for a coffee shop.",
-    techonologies: ["HTML", "CSS"],
-    show: true,
-  },
+
   {
     name: "Responsive product card",
     site: "https://fem-product-review-card-component.netlify.app/",
     repository: "https://github.com/kike9978/fem-product-review-card",
     description: "Showcase of a responsive card UI Component",
-    techonologies: ["HTML", "CSS"],
+    technologies: ["HTML", "CSS"],
+    imagePath: "/src/assets/dev-mode/product-review-card.png",
     show: true,
   },
   {
@@ -64,32 +100,9 @@ const devProjects = [
     site: "https://ktoplibrary.netlify.app/",
     repository: "https://github.com/kike9978/top-project-library",
     description: "A web app to track your book records",
-    techonologies: ["JavaScript", "HTML", "CSS", "Webpack"],
+    technologies: ["JavaScript", "HTML", "CSS", "Webpack"],
+    imagePath: "/src/assets/dev-mode/r-p-s.png",
     show: false,
-  },
-  {
-    name: "Pixel Art Maker",
-    site: "https://k-pixel-art.netlify.app/",
-    repository: "https://github.com/kike9978/pixel-art",
-    description: "A fun and colorful etch-a-sketch",
-    techonologies: ["JavaScript", "HTML", "CSS"],
-    show: true,
-  },
-  {
-    name: "Rock, Paper, Scissors",
-    site: "https://k-piedra-papel-tijeras.netlify.app/",
-    repository: "https://github.com/kike9978/rock-paper-scissors",
-    description: "The classic game meets a strategy game",
-    techonologies: ["JavaScript", "HTML", "CSS"],
-    show: true,
-  },
-  {
-    name: "Naves chidas",
-    site: "https://colombofilo.itch.io/naves-chidas",
-    repository: null,
-    description: "A fun space shooter, are you up to the challenge",
-    techonologies: ["Unity", "Photoshop", "Maya"],
-    show: true,
   },
 ];
 ---
@@ -111,51 +124,7 @@ const devProjects = [
   <div class="grid grid-cols-4 gap-2">
     {
       devProjects.map((project) => {
-        return (
-          project.show && (
-            <article class="p-4 bg-gray-50 rounded-lg border-2 border-black border-solid flex flex-col">
-              <img src="./" alt="" />
-              <div class="flex-grow">
-                <h2 class="font-heading font-bold text-2xl">{project.name}</h2>
-                <p>{project.description}</p>
-              </div>
-              <div class="flex gap-1">
-                {project.site && (
-                  <a
-                    title="Live site"
-                    class="font-bold text-blue-500 hover:text-blue-600"
-                    href={project.site}
-                    target="_blank"
-                  >
-                    <span class="material-symbols-outlined">language</span>
-                  </a>
-                )}
-                {project.repository && (
-                  <a
-                    title="Code repository"
-                    class="font-bold text-blue-500 hover:text-blue-600"
-                    href={project.repository}
-                    target="_blank"
-                  >
-                    <span class="material-symbols-outlined">code</span>
-                  </a>
-                )}
-              </div>
-              <p>Techonologies:</p>
-              <div class="flex gap-2 flex-wrap">
-                {project.techonologies.map((techonology) => {
-                  return (
-                    <div>
-                      <span class="rounded-xl px-2 py-1 bg-slate-200 text-slate-700">
-                        {techonology}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            </article>
-          )
-        );
+        return project.show && <DevProjectCard {...project} />;
       })
     }
   </div>
