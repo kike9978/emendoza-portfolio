@@ -1,11 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CaseStudyCard from "../components/CaseStudyCard.astro";
+import ogImage from "/src/assets/homepage.png";
 
 import imageTest from "/src/assets/peek-a-duck.gif";
 ---
 
-<BaseLayout title="UX Designer">
+<BaseLayout
+	title="UX Designer"
+	image={ogImage.src}
+	description="Enrique Mendoza´s UX designer portfolio´s homepage"
+>
 	<div class="w-full">
 		<h1
 			class="mt-20 md:mt-36 text-center text-7xl lg:text-9xl font-extrabold font-heading bg-clip-text text-transparent dark:filter dark:invert bg-[radial-gradient(at_right_top,_var(--tw-gradient-stops))] from-[rgba(149,_186,_177,_1)] to-[rgba(4,_26,_39,_1)]"
